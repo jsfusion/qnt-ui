@@ -9,7 +9,7 @@ addons.setConfig({
     colorSecondary: '#5743d6',
     appBg: '#ffffff',
     appContentBg: '#ffffff',
-    brandTitle: `Custom components <small style="color: #3c4edd; font-weight: 600;margin-left: 4px;">${libVersion}</small><br /><small><span style="font-weight: 300">from</span> QNT Components</small>`,
+    brandTitle: `<small style="color: #3c4edd; font-weight: 600;margin-left: 4px;">QNT Components ${libVersion}</small>`,
     brandUrl: '/',
     gridCellSize: 8,
   }),
