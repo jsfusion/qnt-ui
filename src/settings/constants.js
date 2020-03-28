@@ -1,9 +1,11 @@
 export const themeProps = {
-    classPrefix: 'app-components',
-    primaryColor: 'red',
-    secondaryColor: 'green',
-    tertiaryColor: 'blue',
-    fontPrimaryColor: '#FFFFFF',
-    fontSecondaryColor: '#FFFFFF',
-    fontTertiaryColor: '#FFFFFF',
+    classPrefix: 'qnt-components',
+    primaryColor: '#ee4037',
+    secondaryColor: '#ffffff',
+    disabledColor: '#757474',
+    primaryFontColor: '#ffffff',
+    secondaryFontColor: '#ee4037',
+    disabledFontColor: '#ffffff',
 };
+
+export const libVersion = 'v0.1.0';

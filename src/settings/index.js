@@ -1,3 +1,3 @@
-import { themeProps } from './constants';
+import { themeProps, libVersion } from './constants';
 
-export { themeProps };
+export { themeProps, libVersion };

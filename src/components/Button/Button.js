@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
@@ -12,10 +14,9 @@ const sizes = {
   large: 'large'
 };
 
-const varients = {
+const variants = {
   primary: 'primary',
   secondary: 'secondary',
-  tertiary: 'tertiary'
 };
 
 const Button = React.forwardRef(
@@ -23,16 +24,21 @@ const Button = React.forwardRef(
     {
       children,
       id,
-      size = sizes.small,
-      varient = 'primary',
+      size = sizes.medium,
+      variant = 'primary',
+      isDisabled = false,
+      onClick,
       ...rest
     },
   ) => {
     return (
-      <ThemeProvider theme={{ size: size, varient: varient }}>
+      <ThemeProvider theme={{ size: size, variant: variant }}>
         <StyledButton
           id={id}
           className={`${classPrefix}-button`}
+          disabled={isDisabled}
+          variant={variant}
+          onClick={onClick}
         >
           <span className={`${classPrefix}-button__label`}>{children}</span>
         </StyledButton>
@@ -44,7 +50,9 @@ const Button = React.forwardRef(
 Button.propTypes = {
   id: PropTypes.string,
   size: PropTypes.oneOf(Object.keys(sizes)),
-  varient: PropTypes.oneOf(Object.keys(varients)),
+  variant: PropTypes.oneOf(Object.keys(variants)),
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
 }
 
 export default Button;
