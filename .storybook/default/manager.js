@@ -9,8 +9,8 @@ addons.setConfig({
     colorSecondary: '#5743d6',
     appBg: '#ffffff',
     appContentBg: '#ffffff',
-    brandTitle: `<small style="color: #ee4037; font-weight: 600;">QNT Components ${libVersion}</small>`,
-    brandUrl: '/',
+    brandTitle: `<span style="color: #ee4037; font-weight: 600;">QNT UI ${libVersion}</span>`,
+    brandUrl: 'https://github.com/shubham-thakare/qnt-ui',
     gridCellSize: 8,
   }),
 });

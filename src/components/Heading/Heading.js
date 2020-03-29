@@ -37,7 +37,7 @@ const Heading = React.forwardRef(
         { type === types.h1 &&
           <StyledHeading1
             id={id}
-            className={`${classPrefix}-heading`}
+            className={`${classPrefix}-heading-h1`}
           >
             {children}
           </StyledHeading1>
