@@ -39,7 +39,7 @@ const Heading = React.forwardRef(
             id={id}
             className={`${classPrefix}-heading`}
           >
-            <span className={`${classPrefix}-heading__label`}>{children}</span>
+            {children}
           </StyledHeading1>
         }
 
@@ -48,7 +48,7 @@ const Heading = React.forwardRef(
             id={id}
             className={`${classPrefix}-heading-h2`}
           >
-            <span className={`${classPrefix}-heading--h2__label`}>{children}</span>
+            {children}
           </StyledHeading2>
         }
 
@@ -57,7 +57,7 @@ const Heading = React.forwardRef(
             id={id}
             className={`${classPrefix}-heading-h3`}
           >
-            <span className={`${classPrefix}-heading--h3__label`}>{children}</span>
+            {children}
           </StyledHeading3>
         }
 
@@ -66,7 +66,7 @@ const Heading = React.forwardRef(
             id={id}
             className={`${classPrefix}-heading-h4`}
           >
-            <span className={`${classPrefix}-heading--h4__label`}>{children}</span>
+            {children}
           </StyledHeading4>
         }
 
@@ -75,7 +75,7 @@ const Heading = React.forwardRef(
             id={id}
             className={`${classPrefix}-heading-h5`}
           >
-            <span className={`${classPrefix}-heading--h5__label`}>{children}</span>
+            {children}
           </StyledHeading5>
         }
 
@@ -84,7 +84,7 @@ const Heading = React.forwardRef(
             id={id}
             className={`${classPrefix}-heading-h6`}
           >
-            <span className={`${classPrefix}-heading--h6__label`}>{children}</span>
+            {children}
           </StyledHeading6>
         }
       </ThemeProvider>

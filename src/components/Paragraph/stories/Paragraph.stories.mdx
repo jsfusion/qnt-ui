@@ -1,0 +1,74 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Paragraph from '..';
+
+<Meta title="Components/Paragraph" />
+
+<Story name="Import" />
+
+# Paragraph
+
+Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation.
+
+## Import
+
+```jsx
+import { Paragraph } from '@qnt/components';
+```
+
+<Story name="Usage" />
+
+## Usage
+
+### Default
+
+<Preview withToolbar>
+  <Story name="1. Default">
+    <>
+      <section>
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### Bold
+
+<Preview withToolbar>
+  <Story name="2. Bold">
+    <>
+      <section>
+        <Paragraph isBold>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### Italic
+
+<Preview withToolbar>
+  <Story name="3. Italic">
+    <>
+      <section>
+        <Paragraph isItalic>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### Justify
+
+<Preview withToolbar>
+  <Story name="4. Justify">
+    <>
+      <section>
+        <Paragraph isJustify>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+<Story name="Props" />
+
+## Props
+
+<Props of={Paragraph} />
