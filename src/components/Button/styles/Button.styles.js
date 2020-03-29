@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import theme from 'styled-theming';
-import { rem } from 'polished';
-import { themeProps } from '../../../settings';
+import { themeProps, spacings } from '../../../settings';
 
 const {
   primaryColor,
@@ -12,10 +11,12 @@ const {
   disabledFontColor,
 } = themeProps;
 
+const { spacing1, spacing2, spacing3, spacing6 } = spacings;
+
 const padding = theme('size', {
-  small: `${rem('6px')} ${rem('12px')}`,
-  medium: `${rem('8px')} ${rem('20px')}`,
-  large: `${rem('12px')} ${rem('30px')}`,
+  small: `${spacing1} ${spacing2}`,
+  medium: `${spacing2} ${spacing3}`,
+  large: `${spacing3} ${spacing6}`,
 });
 
 const bgColor = theme('variant', {
