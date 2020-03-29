@@ -8,4 +8,4 @@ export const themeProps = {
     disabledFontColor: '#ffffff',
 };
 
-export const libVersion = 'v0.1.0';
+export const libVersion = 'v1.0.0';

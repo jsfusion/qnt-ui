@@ -40,18 +40,11 @@ console.log('Deleting old dist folders...');
 Promise.all([rimrafAsync(`${rootDir}/dist`)])
   .then(() => {
     exec(
-      `${babelPath} src --out-dir dist --copy-files && del ${ignoreGlobs}`,
+      `${babelPath} src --out-dir dist --copy-files`, //  && del ${ignoreGlobs}
       {
         NODE_ENV: 'production',
       },
     );
-
-    // exec(
-    //   `${babelPath} src --out-dir dist/esm --copy-files && del ${ignoreGlobs}`,
-    //   {
-    //     NODE_ENV: 'es',
-    //   },
-    // );
   })
   .catch(error => {
     console.error('One of the commands failed:', error.stack); // eslint-disable-line no-console
