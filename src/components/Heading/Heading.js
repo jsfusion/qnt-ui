@@ -30,6 +30,7 @@ const Heading = React.forwardRef(
       type = types.h3,
       ...rest
     },
+    ref
   ) => {
     return (
       <ThemeProvider theme={{ type: type }}>

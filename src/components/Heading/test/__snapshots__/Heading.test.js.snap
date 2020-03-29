@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`***--- Heading Component ---*** To match snapshot of Heading component 1`] = `ShallowWrapper {}`;

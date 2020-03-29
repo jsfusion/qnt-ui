@@ -1,10 +1,23 @@
-import { configure } from 'enzyme';
+import React from 'react';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import Heading from '..';
 
 configure({ adapter: new Adapter() });
 
-describe('***--- Header Component ---***', () => {
-  it('test', () => {
-    expect(1).toEqual(1);
+let wrapper;
+const props = {
+  id: 'test_heading_id',
+  type: 'h1',
+};
+
+describe('***--- Heading Component ---***', () => {
+  beforeAll(() => {
+    wrapper = shallow(<Heading {...props} />);
+  });
+
+  it('To match snapshot of Heading component', async (done) => {
+    expect(wrapper).toMatchSnapshot();
+    done();
   });
 });

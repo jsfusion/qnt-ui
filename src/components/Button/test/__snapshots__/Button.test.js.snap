@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`***--- Button Component ---*** To match snapshot of Button component 1`] = `ShallowWrapper {}`;

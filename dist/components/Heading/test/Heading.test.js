@@ -1,10 +1,16 @@
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure({
-  adapter: new Adapter()
+"use strict";
+
+var _enzyme = require("enzyme");
+
+var _enzymeAdapterReact = _interopRequireDefault(require("enzyme-adapter-react-16"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _enzyme.configure)({
+  adapter: new _enzymeAdapterReact.default()
 });
-describe('***--- Header Component ---***', () => {
-  it('test', () => {
+describe('***--- Header Component ---***', function () {
+  it('test', function () {
     expect(1).toEqual(1);
   });
 });

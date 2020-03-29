@@ -1,12 +1,28 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import { ThemeProvider } from 'styled-components';
-import { StyledHeading1, StyledHeading2, StyledHeading3, StyledHeading4, StyledHeading5, StyledHeading6 } from './styles/Heading.styles';
-import { themeProps } from '../../settings';
-const {
-  classPrefix
-} = themeProps;
-const types = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = require("prop-types");
+
+var _styledComponents = require("styled-components");
+
+var _Heading = require("./styles/Heading.styles");
+
+var _settings = require("../../settings");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var classPrefix = _settings.themeProps.classPrefix;
+var types = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
@@ -14,50 +30,54 @@ const types = {
   h5: 'h5',
   h6: 'h6'
 };
-const Heading = React.forwardRef(({
-  children,
-  id,
-  type = types.h3,
-  ...rest
-}) => {
-  return React.createElement(ThemeProvider, {
+
+var Heading = _react.default.forwardRef(function (_ref) {
+  var children = _ref.children,
+      id = _ref.id,
+      _ref$type = _ref.type,
+      type = _ref$type === void 0 ? types.h3 : _ref$type,
+      rest = _objectWithoutProperties(_ref, ["children", "id", "type"]);
+
+  return _react.default.createElement(_styledComponents.ThemeProvider, {
     theme: {
       type: type
     }
-  }, type === types.h1 && React.createElement(StyledHeading1, {
+  }, type === types.h1 && _react.default.createElement(_Heading.StyledHeading1, {
     id: id,
-    className: `${classPrefix}-heading`
-  }, React.createElement("span", {
-    className: `${classPrefix}-heading__label`
-  }, children)), type === types.h2 && React.createElement(StyledHeading2, {
+    className: "".concat(classPrefix, "-heading")
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-heading__label")
+  }, children)), type === types.h2 && _react.default.createElement(_Heading.StyledHeading2, {
     id: id,
-    className: `${classPrefix}-heading-h2`
-  }, React.createElement("span", {
-    className: `${classPrefix}-heading--h2__label`
-  }, children)), type === types.h3 && React.createElement(StyledHeading3, {
+    className: "".concat(classPrefix, "-heading-h2")
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-heading--h2__label")
+  }, children)), type === types.h3 && _react.default.createElement(_Heading.StyledHeading3, {
     id: id,
-    className: `${classPrefix}-heading-h3`
-  }, React.createElement("span", {
-    className: `${classPrefix}-heading--h3__label`
-  }, children)), type === types.h4 && React.createElement(StyledHeading4, {
+    className: "".concat(classPrefix, "-heading-h3")
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-heading--h3__label")
+  }, children)), type === types.h4 && _react.default.createElement(_Heading.StyledHeading4, {
     id: id,
-    className: `${classPrefix}-heading-h4`
-  }, React.createElement("span", {
-    className: `${classPrefix}-heading--h4__label`
-  }, children)), type === types.h5 && React.createElement(StyledHeading5, {
+    className: "".concat(classPrefix, "-heading-h4")
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-heading--h4__label")
+  }, children)), type === types.h5 && _react.default.createElement(_Heading.StyledHeading5, {
     id: id,
-    className: `${classPrefix}-heading-h5`
-  }, React.createElement("span", {
-    className: `${classPrefix}-heading--h5__label`
-  }, children)), type === types.h6 && React.createElement(StyledHeading6, {
+    className: "".concat(classPrefix, "-heading-h5")
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-heading--h5__label")
+  }, children)), type === types.h6 && _react.default.createElement(_Heading.StyledHeading6, {
     id: id,
-    className: `${classPrefix}-heading-h6`
-  }, React.createElement("span", {
-    className: `${classPrefix}-heading--h6__label`
+    className: "".concat(classPrefix, "-heading-h6")
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-heading--h6__label")
   }, children)));
 });
+
 Heading.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.oneOf(Object.keys(types))
+  id: _propTypes.PropTypes.string,
+  type: _propTypes.PropTypes.oneOf(Object.keys(types))
 };
-export default Heading;
+var _default = Heading;
+exports.default = _default;

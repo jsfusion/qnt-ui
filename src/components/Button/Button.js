@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
@@ -30,6 +28,7 @@ const Button = React.forwardRef(
       onClick,
       ...rest
     },
+    ref
   ) => {
     return (
       <ThemeProvider theme={{ size: size, variant: variant }}>

@@ -1,49 +1,71 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import { ThemeProvider } from 'styled-components';
-import { StyledButton } from './styles/Button.styles';
-import { themeProps } from '../../settings';
-const {
-  classPrefix
-} = themeProps;
-const sizes = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = require("prop-types");
+
+var _styledComponents = require("styled-components");
+
+var _Button = require("./styles/Button.styles");
+
+var _settings = require("../../settings");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var classPrefix = _settings.themeProps.classPrefix;
+var sizes = {
   small: 'small',
   medium: 'medium',
   large: 'large'
 };
-const variants = {
+var variants = {
   primary: 'primary',
   secondary: 'secondary'
 };
-const Button = React.forwardRef(({
-  children,
-  id,
-  size = sizes.medium,
-  variant = 'primary',
-  isDisabled = false,
-  onClick,
-  ...rest
-}) => {
-  return React.createElement(ThemeProvider, {
+
+var Button = _react.default.forwardRef(function (_ref) {
+  var children = _ref.children,
+      id = _ref.id,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? sizes.medium : _ref$size,
+      _ref$variant = _ref.variant,
+      variant = _ref$variant === void 0 ? 'primary' : _ref$variant,
+      _ref$isDisabled = _ref.isDisabled,
+      isDisabled = _ref$isDisabled === void 0 ? false : _ref$isDisabled,
+      onClick = _ref.onClick,
+      rest = _objectWithoutProperties(_ref, ["children", "id", "size", "variant", "isDisabled", "onClick"]);
+
+  return _react.default.createElement(_styledComponents.ThemeProvider, {
     theme: {
       size: size,
       variant: variant
     }
-  }, React.createElement(StyledButton, {
+  }, _react.default.createElement(_Button.StyledButton, {
     id: id,
-    className: `${classPrefix}-button`,
+    className: "".concat(classPrefix, "-button"),
     disabled: isDisabled,
     variant: variant,
     onClick: onClick
-  }, React.createElement("span", {
-    className: `${classPrefix}-button__label`
+  }, _react.default.createElement("span", {
+    className: "".concat(classPrefix, "-button__label")
   }, children)));
 });
+
 Button.propTypes = {
-  id: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(sizes)),
-  variant: PropTypes.oneOf(Object.keys(variants)),
-  isDisabled: PropTypes.bool,
-  onClick: PropTypes.func
+  id: _propTypes.PropTypes.string,
+  size: _propTypes.PropTypes.oneOf(Object.keys(sizes)),
+  variant: _propTypes.PropTypes.oneOf(Object.keys(variants)),
+  isDisabled: _propTypes.PropTypes.bool,
+  onClick: _propTypes.PropTypes.func
 };
-export default Button;
+var _default = Button;
+exports.default = _default;

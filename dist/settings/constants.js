@@ -1,4 +1,10 @@
-export const themeProps = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.libVersion = exports.themeProps = void 0;
+var themeProps = {
   classPrefix: 'qnt-components',
   primaryColor: '#ee4037',
   secondaryColor: '#ffffff',
@@ -7,4 +13,6 @@ export const themeProps = {
   secondaryFontColor: '#ee4037',
   disabledFontColor: '#ffffff'
 };
-export const libVersion = 'v0.1.0';
+exports.themeProps = themeProps;
+var libVersion = 'v0.1.0';
+exports.libVersion = libVersion;
