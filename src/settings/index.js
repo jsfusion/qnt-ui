@@ -1,3 +1,3 @@
-import { themeProps, libVersion } from './constants';
+import { themeProps, appPrefix, libVersion, spacings } from './constants';
 
-export { themeProps, libVersion };
+export { themeProps, appPrefix, libVersion, spacings };
