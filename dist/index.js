@@ -15,9 +15,17 @@ Object.defineProperty(exports, "Heading", {
     return _Heading.default;
   }
 });
+Object.defineProperty(exports, "Label", {
+  enumerable: true,
+  get: function get() {
+    return _Label.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./components/Button"));
 
 var _Heading = _interopRequireDefault(require("./components/Heading"));
+
+var _Label = _interopRequireDefault(require("./components/Label"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

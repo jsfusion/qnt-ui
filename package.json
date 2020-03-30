@@ -1,42 +1,43 @@
 {
   "name": "@qnt/ui",
   "version": "1.0.0",
+  "description": "QNT UI Component Library",
+  "sideEffects": false,
   "private": true,
+  "author": "Shubham Thakare",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run storybook",
+    "start:app": "react-scripts start",
+    "test": "jest --watch",
+    "eject": "react-scripts eject",
+    "clean": "rm -rf node_modules package-lock.json yarn.lock",
+    "new:component": "hygen component new",
+    "build:css": "postcss src/assets/styles.css -o styles.css --env production",
+    "storybook": "start-storybook -c .storybook/default -p 3100 -s static --ci",
+    "build:storybook": "build-storybook --docs -c .storybook/default -s static -o public",
+    "serve:storybook": "serve public",
+    "build": "npm run build:css && node scripts/build.js",
+    "rebuild": "npm run clean && npm install && npm run build",
+    "watch:css": "postcss src/assets/styles.css -o styles.css -w",
+    "watch": ""
+  },
   "dependencies": {
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "9.5.0",
     "@testing-library/user-event": "7.2.1",
     "polished": "3.5.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "5.0.1",
     "styled-theming": "2.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "node scripts/build.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -c .storybook/default -p 3100 -s static --ci",
-    "build:storybook": "build-storybook --docs -c .storybook/default -s static -o public",
-    "serve:storybook": "serve public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "peerDependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -55,11 +56,42 @@
     "@storybook/addon-viewport": "5.3.17",
     "@storybook/preset-create-react-app": "2.1.1",
     "@storybook/react": "5.3.17",
+    "autoprefixer": "9.7.4",
     "babel-loader": "8.1.0",
     "babel-preset-es2015": "6.24.1",
     "cross-env": "7.0.2",
+    "cssnano": "4.1.10",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
-    "postcss-cli": "7.1.0"
+    "faker": "4.1.0",
+    "hygen": "5.0.3",
+    "postcss-cli": "7.1.0",
+    "prettier": "1.19.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "eslint-loader": "3.0.2"
+  },
+  "release": {
+    "branch": "master"
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "npm install"
+    }
   }
 }
