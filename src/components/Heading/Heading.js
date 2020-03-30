@@ -38,6 +38,8 @@ const Heading = React.forwardRef(
           <StyledHeading1
             id={id}
             className={`${classPrefix}-heading-h1`}
+            ref={ref}
+            {...rest}
           >
             {children}
           </StyledHeading1>
@@ -47,6 +49,8 @@ const Heading = React.forwardRef(
           <StyledHeading2
             id={id}
             className={`${classPrefix}-heading-h2`}
+            ref={ref}
+            {...rest}
           >
             {children}
           </StyledHeading2>
@@ -56,6 +60,8 @@ const Heading = React.forwardRef(
           <StyledHeading3
             id={id}
             className={`${classPrefix}-heading-h3`}
+            ref={ref}
+            {...rest}
           >
             {children}
           </StyledHeading3>
@@ -65,6 +71,8 @@ const Heading = React.forwardRef(
           <StyledHeading4
             id={id}
             className={`${classPrefix}-heading-h4`}
+            ref={ref}
+            {...rest}
           >
             {children}
           </StyledHeading4>
@@ -74,6 +82,8 @@ const Heading = React.forwardRef(
           <StyledHeading5
             id={id}
             className={`${classPrefix}-heading-h5`}
+            ref={ref}
+            {...rest}
           >
             {children}
           </StyledHeading5>
@@ -83,6 +93,8 @@ const Heading = React.forwardRef(
           <StyledHeading6
             id={id}
             className={`${classPrefix}-heading-h6`}
+            ref={ref}
+            {...rest}
           >
             {children}
           </StyledHeading6>

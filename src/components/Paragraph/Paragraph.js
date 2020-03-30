@@ -22,10 +22,12 @@ const Paragraph = React.forwardRef(
       <ThemeProvider theme={{}}>
           <StyledParagraph
             id={id}
+            ref={ref}
             className={`${classPrefix}-paragraph`}
             isBold={isBold}
             isItalic={isItalic}
             isJustify={isJustify}
+            {...rest}
           >
             {children}
           </StyledParagraph>

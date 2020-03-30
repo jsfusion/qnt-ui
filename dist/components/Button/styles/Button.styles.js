@@ -11,8 +11,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _styledTheming = _interopRequireDefault(require("styled-theming"));
 
-var _polished = require("polished");
-
 var _settings = require("../../../settings");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -49,10 +47,14 @@ var primaryColor = _settings.themeProps.primaryColor,
     primaryFontColor = _settings.themeProps.primaryFontColor,
     secondaryFontColor = _settings.themeProps.secondaryFontColor,
     disabledFontColor = _settings.themeProps.disabledFontColor;
+var spacing1 = _settings.spacings.spacing1,
+    spacing2 = _settings.spacings.spacing2,
+    spacing3 = _settings.spacings.spacing3,
+    spacing6 = _settings.spacings.spacing6;
 var padding = (0, _styledTheming.default)('size', {
-  small: "".concat((0, _polished.rem)('6px'), " ").concat((0, _polished.rem)('12px')),
-  medium: "".concat((0, _polished.rem)('8px'), " ").concat((0, _polished.rem)('20px')),
-  large: "".concat((0, _polished.rem)('12px'), " ").concat((0, _polished.rem)('30px'))
+  small: "".concat(spacing1, " ").concat(spacing2),
+  medium: "".concat(spacing2, " ").concat(spacing3),
+  large: "".concat(spacing3, " ").concat(spacing6)
 });
 var bgColor = (0, _styledTheming.default)('variant', {
   primary: primaryColor,

@@ -35,9 +35,11 @@ const Label = React.forwardRef(
       <ThemeProvider theme={{}}>
           <StyledLabel
             id={id}
+            ref={ref}
             className={`${classPrefix}-label`}
             fontWeight={fontWeight}
             isItalic={isItalic}
+            {...rest}
           >
             {children}
           </StyledLabel>

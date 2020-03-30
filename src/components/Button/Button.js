@@ -34,10 +34,12 @@ const Button = React.forwardRef(
       <ThemeProvider theme={{ size: size, variant: variant }}>
         <StyledButton
           id={id}
+          ref={ref}
           className={`${classPrefix}-button`}
           disabled={isDisabled}
           variant={variant}
           onClick={onClick}
+          {...rest}
         >
           <span className={`${classPrefix}-button__label`}>{children}</span>
         </StyledButton>
