@@ -1,0 +1,89 @@
+import { useState, useEffect } from 'react';
+import { Meta, Story, Preview, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks';
+import styled from 'styled-components';
+import { Icon } from '@blueprintjs/core';
+import { IconNames } from "@blueprintjs/icons";
+import StoryTag from '../../src/internal/StoryTag';
+
+export const IconGallery = () => {
+  const icons = Object.keys(IconNames).map(name => ({ iconName: IconNames[name]}));
+  return (
+    <>
+      <IconContainer>
+         {icons.map(item => (
+          <IconItem key={item.iconName} data-name={item.iconName}><Icon iconSize={16} icon={item.iconName}/></IconItem>
+        ))}
+      </IconContainer>
+    </>
+  );
+}
+
+export const IconContainer = styled.div`
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: inset 0 0 0 -1px '#33333f';
+`;
+
+export const IconItem = styled.div`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.25%;
+    height: 50px;
+    background: '#ffffff';
+    transition: all 300ms ease-in-out;
+    &:hover {
+        position: relative;
+        z-index: 1;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    &::after {
+        content: attr(data-name);
+        opacity: 0;
+        position: absolute;
+        font-size: 12px;
+        top: -15px;
+        white-space: nowrap;
+        left: 50%;
+        color: '#33333f';
+        padding: 4px 8px;
+        background: '#ffffff';
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px;
+        transform: translateX(-50%);
+    }
+    &:hover::before,
+    &:hover::after {
+        opacity: 1;
+    }
+`;
+
+export const IconPalette = () => {
+    return icons.map(icon => (
+        <IconItem key={icon.iconName} data-name={icon.iconName}><Icon size={16} icon={icon.iconName} /></IconItem>
+    ))
+}
+
+<Meta title="Foundations/Iconography" />
+
+# Iconography
+
+<StoryTag title="Inherited from" link="https://blueprintjs.com/docs/#icons">Blueprint Icons</StoryTag>
+
+Blueprint provides over 300 vector UI icons and easy access to change their color or apply effects like text shadows via standard SVG or CSS properties.
+
+<IconGallery />

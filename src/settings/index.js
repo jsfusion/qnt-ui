@@ -1,3 +1,3 @@
-import { themeProps, appPrefix, libVersion, spacings, fontSizes } from './constants';
+import { themeProps, appPrefix, libVersion, spacings, layoutSpacings, fontSizes, colors } from './constants';
 
-export { themeProps, appPrefix, libVersion, spacings, fontSizes };
+export { themeProps, appPrefix, libVersion, spacings, layoutSpacings, fontSizes, colors };

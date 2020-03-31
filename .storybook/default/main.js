@@ -1,6 +1,7 @@
 module.exports = {
     stories: [
       '../../docs/get-started/*.stories.mdx',
+      '../../docs/foundations/*.stories.mdx',
       '../../src/components/**/*.stories.mdx',
     ],
     addons: [

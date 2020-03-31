@@ -37,6 +37,7 @@ const Button = React.forwardRef(
           ref={ref}
           className={`${classPrefix}-button`}
           disabled={isDisabled}
+          aria-disabled={isDisabled}
           variant={variant}
           onClick={onClick}
           {...rest}
