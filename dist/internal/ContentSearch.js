@@ -22,7 +22,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  background: transparent;\n  max-width: 340px;\n  width: 100%;\n  height: '36px';\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  background: transparent;\n  max-width: 340px;\n  width: 100%;\n  height: '36px';\n\n  #internal-search-input:focus {\n    box-shadow: 0 0 0 2px ", ", \n      0 0 0 3px ", ", \n      inset 0 1px 1px rgba(16, 22, 26, 0.2);\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33,7 +33,10 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var StyledContentSearch = (0, _styledComponents.default)(_core.InputGroup)(_templateObject());
+var _colors$rag$red = _settings.colors.rag.red,
+    ColorRedLight = _colors$rag$red.ColorRedLight,
+    ColorRedLighter = _colors$rag$red.ColorRedLighter;
+var StyledContentSearch = (0, _styledComponents.default)(_core.InputGroup)(_templateObject(), ColorRedLight, ColorRedLighter);
 
 var ContentSearch = function ContentSearch(_ref) {
   var value = _ref.value,
