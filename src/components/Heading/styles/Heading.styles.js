@@ -1,45 +1,62 @@
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import { spacings, fontSizes } from '../../../settings';
+import {
+  appPrefix,
+  spacings,
+  fontSizes,
+  typographyWeights,
+  colors,
+} from '../../../settings';
 
-const { spacing1, spacing2, spacing3, spacing4 } = spacings;
+const { Spacing1, Spacing2, Spacing3, Spacing4 } = spacings;
 const { h1, h2, h3, h4, h5, h6 } = fontSizes;
+const { TypographyWeightRegular } = typographyWeights;
+const { primary: { ColorJetBase } } = colors;
 
 const margin = theme('type', {
-  h1: `${spacing4} 0`,
-  h2: `${spacing4} 0`,
-  h3: `${spacing3} 0`,
-  h4: `${spacing3} 0`,
-  h5: `${spacing2} 0`,
-  h6: `${spacing1} 0`,
+  h1: `${Spacing4} 0`,
+  h2: `${Spacing4} 0`,
+  h3: `${Spacing3} 0`,
+  h4: `${Spacing3} 0`,
+  h5: `${Spacing2} 0`,
+  h6: `${Spacing1} 0`,
 });
 
+const styleHeading = (elementMargin, fontSize) => `
+  margin: ${elementMargin};
+  font-size: ${fontSize};
+
+  &.${appPrefix}-heading--italic {
+    font-style: italic;
+  }
+
+  &.${appPrefix}-heading--assistive {
+    font-style: italic;
+    font-weight: ${TypographyWeightRegular};
+    color: ${ColorJetBase};
+  }
+`;
+
 export const StyledHeading1 = styled.h1`
-  margin: ${margin};
-  font-size: ${h1};
+  ${styleHeading(margin, h1)}
 `;
 
 export const StyledHeading2 = styled.h2`
-  margin: ${margin};
-  font-size: ${h2};
+  ${styleHeading(margin, h2)}
 `;
 
 export const StyledHeading3 = styled.h3`
-  margin: ${margin};
-  font-size: ${h3};
+  ${styleHeading(margin, h3)}
 `;
 
 export const StyledHeading4 = styled.h4`
-  margin: ${margin};
-  font-size: ${h4};
+  ${styleHeading(margin, h4)}
 `;
 
 export const StyledHeading5 = styled.h5`
-  margin: ${margin};
-  font-size: ${h5};
+  ${styleHeading(margin, h5)}
 `;
 
 export const StyledHeading6 = styled.h6`
-  margin: ${margin};
-  font-size: ${h6};
+  ${styleHeading(margin, h6)}
 `;

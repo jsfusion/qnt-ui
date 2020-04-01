@@ -3,35 +3,65 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "themeProps", {
-  enumerable: true,
-  get: function get() {
-    return _constants.themeProps;
-  }
-});
 Object.defineProperty(exports, "appPrefix", {
   enumerable: true,
   get: function get() {
-    return _constants.appPrefix;
+    return _theme.appPrefix;
   }
 });
 Object.defineProperty(exports, "libVersion", {
   enumerable: true,
   get: function get() {
-    return _constants.libVersion;
+    return _theme.libVersion;
   }
 });
 Object.defineProperty(exports, "spacings", {
   enumerable: true,
   get: function get() {
-    return _constants.spacings;
+    return _theme.spacings;
+  }
+});
+Object.defineProperty(exports, "layoutSpacings", {
+  enumerable: true,
+  get: function get() {
+    return _theme.layoutSpacings;
   }
 });
 Object.defineProperty(exports, "fontSizes", {
   enumerable: true,
   get: function get() {
-    return _constants.fontSizes;
+    return _theme.fontSizes;
+  }
+});
+Object.defineProperty(exports, "colors", {
+  enumerable: true,
+  get: function get() {
+    return _theme.colors;
+  }
+});
+Object.defineProperty(exports, "typographySizes", {
+  enumerable: true,
+  get: function get() {
+    return _theme.typographySizes;
+  }
+});
+Object.defineProperty(exports, "typographyWeights", {
+  enumerable: true,
+  get: function get() {
+    return _theme.typographyWeights;
+  }
+});
+Object.defineProperty(exports, "typographyLeadings", {
+  enumerable: true,
+  get: function get() {
+    return _theme.typographyLeadings;
+  }
+});
+Object.defineProperty(exports, "typographyKernings", {
+  enumerable: true,
+  get: function get() {
+    return _theme.typographyKernings;
   }
 });
 
-var _constants = require("./constants");
+var _theme = require("./theme");

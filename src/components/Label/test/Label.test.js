@@ -8,8 +8,9 @@ configure({ adapter: new Adapter() });
 let wrapper;
 const props = {
   id: 'test_Label_id',
-  fontWeight: 'bold',
+  isBold: true,
   isItalic: true,
+  isAssistive: true,
 };
 
 describe('***--- Label Component ---***', () => {

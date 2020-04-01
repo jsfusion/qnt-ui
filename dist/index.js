@@ -21,11 +21,27 @@ Object.defineProperty(exports, "Label", {
     return _Label.default;
   }
 });
+Object.defineProperty(exports, "Paragraph", {
+  enumerable: true,
+  get: function get() {
+    return _Paragraph.default;
+  }
+});
+Object.defineProperty(exports, "Icon", {
+  enumerable: true,
+  get: function get() {
+    return _Icon.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./components/Button"));
 
 var _Heading = _interopRequireDefault(require("./components/Heading"));
 
 var _Label = _interopRequireDefault(require("./components/Label"));
+
+var _Paragraph = _interopRequireDefault(require("./components/Paragraph"));
+
+var _Icon = _interopRequireDefault(require("./components/Icon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

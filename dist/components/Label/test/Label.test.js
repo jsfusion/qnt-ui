@@ -20,8 +20,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var wrapper;
 var props = {
   id: 'test_Label_id',
-  fontWeight: 'bold',
-  isItalic: true
+  isBold: true,
+  isItalic: true,
+  isAssistive: true
 };
 describe('***--- Label Component ---***', function () {
   beforeAll(function () {

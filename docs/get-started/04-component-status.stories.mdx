@@ -1,4 +1,10 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import Icon from '../../src/components/Icon';
+import { colors } from '../../src/settings';
+
+export const GreenTick = () => <Icon icon="tick" size={20} color={colors.rag.green.ColorGreenDark}/>;
+
+export const RedCross = () => <Icon icon="cross" size={20} color={colors.rag.red.ColorRedDark}/>;
 
 <Meta title="Get started/Component Status" />
 
@@ -6,11 +12,12 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 
 > <i style={{color: 'red'}}>We are busy in developing various components for you, we'll come up with a first release of the library very soon...</i>
 
-**Legends:** <span style={{color: 'green', fontWeight: 'bold'}}>&#10003;</span> <span style={{color: 'red', fontWeight: 'bold'}}>&#10060;</span>
+**Legends:** <GreenTick /> <RedCross />
 
 | Component | Status | Deprecated |
 | --------- | ----------- | ------ |
-| `Button` | <span style={{color: 'green', fontWeight: 'bold'}}>&#10003;</span> | <span style={{color: 'red', fontWeight: 'bold'}}>&#10060;</span> |
-| `Heading` | <span style={{color: 'green', fontWeight: 'bold'}}>&#10003;</span> | <span style={{color: 'red', fontWeight: 'bold'}}>&#10060;</span> |
-| `Label` | <span style={{color: 'green', fontWeight: 'bold'}}>&#10003;</span> | <span style={{color: 'red', fontWeight: 'bold'}}>&#10060;</span> |
-| `Paragraph` | <span style={{color: 'green', fontWeight: 'bold'}}>&#10003;</span> | <span style={{color: 'red', fontWeight: 'bold'}}>&#10060;</span> |
+| `Button` | <GreenTick /> | <RedCross /> |
+| `Heading` | <GreenTick /> | <RedCross /> |
+| `Icon` | <GreenTick /> | <RedCross /> |
+| `Label` | <GreenTick /> | <RedCross /> |
+| `Paragraph` | <GreenTick /> | <RedCross /> |

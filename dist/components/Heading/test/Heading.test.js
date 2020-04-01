@@ -20,7 +20,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var wrapper;
 var props = {
   id: 'test_heading_id',
-  type: 'h1'
+  type: 'h1',
+  isItalic: true,
+  isAssistive: true
 };
 describe('***--- Heading Component ---***', function () {
   beforeAll(function () {

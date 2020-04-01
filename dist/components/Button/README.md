@@ -5,7 +5,7 @@ Buttons are used to make common actions immediately visible and easy to perform 
 ## Usage
 
 ```js
-import { Button } from '@app/components';
+import { Button } from '@qnt/ui';
 ```
 
 ```jsx
@@ -14,22 +14,7 @@ import { Button } from '@app/components';
 
 ## Prop Types
 
-**varient** `enum`<br />
-One of <**`primary`**, `secondary`><br />
-The base styling to apply to the button
+**id** `string`<br />
+To identify the element
 
 ---
-
-**size** `enum`<br />
-One of <`small`, **`medium`**, `large`><br />
-The size of the button
-
----
-
-**isDisabled** `boolean` = *false*<br />
-Whether this action is non-interactive.
-
----
-
-**onClick** `function`<br />
-HTML `type` attribute of button

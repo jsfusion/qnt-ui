@@ -1,17 +1,30 @@
 import { useState, useEffect } from 'react';
 import { Meta, Story, Preview, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks';
 import styled from 'styled-components';
-import { Icon } from '@blueprintjs/core';
+import Icon from '../../src/components/Icon';
 import { IconNames } from "@blueprintjs/icons";
 import StoryTag from '../../src/internal/StoryTag';
+import ContentSearch from '../../src/internal/ContentSearch';
 
 export const IconGallery = () => {
   const icons = Object.keys(IconNames).map(name => ({ iconName: IconNames[name]}));
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState([]);
+  const handleChange = event => {
+    setSearchTerm(event.target.value);
+  };
+  useEffect(() => {
+    const results = icons.filter(icon =>
+      icon.iconName.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(results);
+  }, [searchTerm]);
   return (
     <>
+      <ContentSearch placeholder="Search icons" isFullWidth value={searchTerm} onChange={handleChange} autocomplete="off" />
       <IconContainer>
-         {icons.map(item => (
-          <IconItem key={item.iconName} data-name={item.iconName}><Icon iconSize={16} icon={item.iconName}/></IconItem>
+         {searchResults.map(item => (
+          <IconItem key={item.iconName} data-name={item.iconName}><Icon icon={item.iconName}/></IconItem>
         ))}
       </IconContainer>
     </>

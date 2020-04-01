@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../settings';
+import { colors} from '../settings';
 
 const {
-  black: {ColorBlackBase},
-  white: {ColorWhiteBase},
+  ColorBlackBase,
+  ColorWhiteBase,
+  ColorJetBase,
+} = colors.primary;
+
+const {
   red: {ColorRedDark},
-  jet: {ColorJetBase},
   green: {ColorGreenDark}
-} = colors;
+} = colors.rag;
 
 const StyledStoryTag = styled.div`
   display: inline-block;

@@ -1,3 +1,25 @@
-import { themeProps, appPrefix, libVersion, spacings, layoutSpacings, fontSizes, colors } from './constants';
+import {
+  appPrefix,
+  libVersion,
+  spacings,
+  layoutSpacings,
+  fontSizes,
+  colors,
+  typographySizes,
+  typographyWeights,
+  typographyLeadings,
+  typographyKernings,
+} from './theme';
 
-export { themeProps, appPrefix, libVersion, spacings, layoutSpacings, fontSizes, colors };
+export {
+    appPrefix,
+    libVersion,
+    spacings,
+    layoutSpacings,
+    fontSizes,
+    colors,
+    typographySizes,
+    typographyWeights,
+    typographyLeadings,
+    typographyKernings,
+};

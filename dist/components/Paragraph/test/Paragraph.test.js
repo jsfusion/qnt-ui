@@ -22,6 +22,7 @@ var props = {
   id: 'test_paragraph_id',
   isBold: true,
   isItalic: true,
+  isAssistive: true,
   isJustify: true
 };
 describe('***--- Paragraph Component ---***', function () {
