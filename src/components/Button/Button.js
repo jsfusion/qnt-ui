@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import cx from 'classnames';
 import { StyledButton } from './styles/Button.styles';
 import { appPrefix } from '../../settings';
-import Icon from '../Icon';
 
 const sizes = {
   small: 'small',
@@ -15,12 +14,6 @@ const sizes = {
 const variants = {
   primary: 'primary',
   secondary: 'secondary',
-};
-
-const iconSizes = {
-  small: 12,
-  medium: 14,
-  large: 16,
 };
 
 const Button = React.forwardRef(
@@ -46,8 +39,6 @@ const Button = React.forwardRef(
       [customClassName]: !!customClassName,
     });
 
-    const iconSize = iconSizes[size] || size;
-
     return (
       <ThemeProvider theme={{ size: size, variant: variant }}>
         <StyledButton
@@ -61,21 +52,7 @@ const Button = React.forwardRef(
           onClick={onClick}
           {...rest}
         >
-          {iconLeft && (
-            <span
-              className={`${appPrefix}-button__icon ${appPrefix}-button__icon--left`}
-            >
-              <Icon icon={iconLeft} size={iconSize} />
-            </span>
-          )}
           <span className={`${appPrefix}-button__label`}>{children}</span>
-          {iconRight && (
-            <span
-              className={`${appPrefix}-button__icon ${appPrefix}-button__icon--right`}
-            >
-              <Icon icon={iconRight} size={iconSize} />
-            </span>
-          )}
         </StyledButton>
       </ThemeProvider>
     );
@@ -88,8 +65,6 @@ Button.propTypes = {
   variant: PropTypes.oneOf(Object.keys(variants)),
   isDisabled: PropTypes.bool,
   isLoading: PropTypes.bool,
-  iconLeft: PropTypes.string,
-  iconRight: PropTypes.string,
   onClick: PropTypes.func,
 }
 

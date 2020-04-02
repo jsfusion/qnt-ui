@@ -33,9 +33,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var _colors$primary = _settings.colors.primary,
-    ColorJetBase = _colors$primary.ColorJetBase,
-    ColorJetLighter = _colors$primary.ColorJetLighter;
+var ColorJetBase = _settings.colors.primary.ColorJetBase;
 var StyledContentSearch = (0, _styledComponents.default)(_core.InputGroup)(_templateObject(), ColorJetBase);
 
 var ContentSearch = function ContentSearch(_ref) {

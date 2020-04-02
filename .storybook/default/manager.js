@@ -11,7 +11,7 @@ addons.setConfig({
     colorSecondary: ColorTamarilloBase,
     appBg: ColorWhiteBase,
     appContentBg: ColorWhiteBase,
-    brandTitle: `<span style="color: ${ColorFlamingoBase}; font-weight: 600;">QNT UI ${libVersion}</span>`,
+    brandTitle: `<span style="color: ${ColorFlamingoBase}; font-size: 16px; line-height: 1.5;">QNT React UI</span> <i>${libVersion}</i>`,
     brandUrl: '/',
     gridCellSize: 8,
   }),

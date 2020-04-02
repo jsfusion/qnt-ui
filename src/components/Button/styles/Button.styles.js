@@ -33,29 +33,9 @@ const borderStyle = theme('variant', {
   secondary: `2px solid ${ColorFlamingoBase}`,
 });
 
-const iconMargin = theme('size', {
-  small: rem('6px'),
-  medium: rem('8px'),
-});
-
-const iconMarginNegative = theme('size', {
-  small: rem('4px'),
-  medium: rem('6px'),
-});
-
 const fontSize = theme('size', {
   small: rem('12px'),
   medium: rem('14px'),
-});
-
-const iconColor = theme.variants('variant', {
-  primary: ColorWhiteBase,
-  secondary: ColorFlamingoBase,
-});
-
-const iconColorDisabled = theme.variants('mode', 'variant', {
-  primary: ColorDisableFg,
-  secondary: ColorDisableFg,
 });
 
 export const StyledButton = styled.button`
@@ -86,14 +66,9 @@ export const StyledButton = styled.button`
     &:hover {
       box-shadow: none;
     }
-
-    .${appPrefix}-button__icon {
-      color: ${iconColorDisabled};
-    }
   }
 
   .${appPrefix}-button__label,
-    .${appPrefix}-button__icon,
     .${appPrefix}-button__spinner {
     position: relative;
     z-index: 2;
@@ -103,28 +78,5 @@ export const StyledButton = styled.button`
     display: inline-block;
     height: ${fontSize};
     opacity: 1;
-  }
-
-  .${appPrefix}-button__icon {
-    height: ${fontSize};
-    width: ${fontSize};
-    display: inline-block;
-    opacity: 1;
-    color: ${iconColor};
-
-    .${appPrefix}-icon {
-      vertical-align: sub;
-      padding-bottom: 2px;
-    }
-
-    &--left {
-      margin-right: ${iconMargin};
-      margin-left: -${iconMarginNegative};
-    }
-
-    &--right {
-      margin-left: ${iconMargin};
-      margin-right: -${iconMarginNegative};
-    }
   }
 `;
