@@ -11,7 +11,7 @@ import {
 const { Spacing1, Spacing2, Spacing3, Spacing4 } = spacings;
 const { h1, h2, h3, h4, h5, h6 } = fontSizes;
 const { TypographyWeightRegular } = typographyWeights;
-const { primary: { ColorJetBase } } = colors;
+const { primary: { ColorJetLighter } } = colors;
 
 const margin = theme('type', {
   h1: `${Spacing4} 0`,
@@ -33,7 +33,7 @@ const styleHeading = (elementMargin, fontSize) => `
   &.${appPrefix}-heading--assistive {
     font-style: italic;
     font-weight: ${TypographyWeightRegular};
-    color: ${ColorJetBase};
+    color: ${ColorJetLighter};
   }
 `;
 

@@ -8,7 +8,10 @@ import {
 
 const { Spacing2 } = spacings;
 const { TypographyWeightRegular } = typographyWeights;
-const { primary: { ColorJetBase } } = colors;
+const {
+  primary: { ColorJetLighter },
+  rag: { red: { ColorRedBase }, amber: { ColorAmberBase }, green: { ColorGreenDark } },
+} = colors;
 
 export const StyledLabel = styled.label`
   display: block;
@@ -25,6 +28,18 @@ export const StyledLabel = styled.label`
   &.${appPrefix}-label--assistive {
     font-style: italic;
     font-weight: ${TypographyWeightRegular};
-    color: ${ColorJetBase};
+    color: ${ColorJetLighter};
+  }
+
+  &.${appPrefix}-label--warning {
+    color: ${ColorAmberBase};
+  }
+
+  &.${appPrefix}-label--error {
+    color: ${ColorRedBase};
+  }
+
+  &.${appPrefix}-label--success {
+    color: ${ColorGreenDark};
   }
 `;

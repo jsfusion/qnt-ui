@@ -39,9 +39,15 @@ var Label = _react.default.forwardRef(function (_ref, ref) {
       isItalic = _ref$isItalic === void 0 ? false : _ref$isItalic,
       _ref$isAssistive = _ref.isAssistive,
       isAssistive = _ref$isAssistive === void 0 ? false : _ref$isAssistive,
-      rest = _objectWithoutProperties(_ref, ["children", "className", "id", "isBold", "isItalic", "isAssistive"]);
+      _ref$isWarning = _ref.isWarning,
+      isWarning = _ref$isWarning === void 0 ? false : _ref$isWarning,
+      _ref$isError = _ref.isError,
+      isError = _ref$isError === void 0 ? false : _ref$isError,
+      _ref$isSuccess = _ref.isSuccess,
+      isSuccess = _ref$isSuccess === void 0 ? false : _ref$isSuccess,
+      rest = _objectWithoutProperties(_ref, ["children", "className", "id", "isBold", "isItalic", "isAssistive", "isWarning", "isError", "isSuccess"]);
 
-  var className = (0, _classnames.default)((_cx = {}, _defineProperty(_cx, "".concat(_settings.appPrefix, "-label"), true), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--bold"), isBold), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--italic"), isItalic), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--assistive"), isAssistive), _defineProperty(_cx, customClassName, !!customClassName), _cx));
+  var className = (0, _classnames.default)((_cx = {}, _defineProperty(_cx, "".concat(_settings.appPrefix, "-label"), true), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--bold"), isBold), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--italic"), isItalic), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--assistive"), isAssistive), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--warning"), isWarning), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--error"), isError), _defineProperty(_cx, "".concat(_settings.appPrefix, "-label--success"), isSuccess), _defineProperty(_cx, customClassName, !!customClassName), _cx));
   return _react.default.createElement(_styledComponents.ThemeProvider, {
     theme: {}
   }, _react.default.createElement(_Label.StyledLabel, _extends({
@@ -55,7 +61,10 @@ Label.propTypes = {
   id: _propTypes.PropTypes.string,
   isBold: _propTypes.PropTypes.bool,
   isItalic: _propTypes.PropTypes.bool,
-  isAssistive: _propTypes.PropTypes.bool
+  isAssistive: _propTypes.PropTypes.bool,
+  isWarning: _propTypes.PropTypes.bool,
+  isError: _propTypes.PropTypes.bool,
+  isSuccess: _propTypes.PropTypes.bool
 };
 var _default = Label;
 exports.default = _default;

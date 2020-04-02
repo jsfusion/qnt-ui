@@ -8,7 +8,7 @@ import {
 
 const { Spacing2 } = spacings;
 const { TypographyWeightRegular } = typographyWeights;
-const { primary: { ColorJetBase } } = colors;
+const { primary: { ColorJetLighter } } = colors;
 
 export const StyledParagraph = styled.p`
   display: block;
@@ -25,7 +25,7 @@ export const StyledParagraph = styled.p`
   &.${appPrefix}-paragraph--assistive {
     font-style: italic;
     font-weight: ${TypographyWeightRegular};
-    color: ${ColorJetBase};
+    color: ${ColorJetLighter};
   }
 
   &.${appPrefix}-paragraph--justify {

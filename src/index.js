@@ -3,6 +3,7 @@ import Heading from './components/Heading';
 import Label from './components/Label';
 import Paragraph from './components/Paragraph';
 import Icon from './components/Icon';
+import Highlight from './components/Highlight';
 
 export {
     Button,
@@ -10,4 +11,5 @@ export {
     Label,
     Paragraph,
     Icon,
+    Highlight,
 };

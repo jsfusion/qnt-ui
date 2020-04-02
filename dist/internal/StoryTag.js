@@ -14,7 +14,7 @@ var _settings = require("../settings");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  overflow: hidden;\n  color: ", ";\n  border: 1px solid ", ";\n  border-radius: 50px;\n  background: ", ";\n  padding-left: 8px;\n  font-size: 12px;\n  vertical-align: middle;\n  line-height: 1;\n  font-weight: bold;\n  margin: 0 8px 16px 0;\n  position: relative;\n  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;\n  text-decoration: none;\n  \n\n  span {\n    display: inline-block;\n    padding: 4px 8px;\n    font-weight: 400;\n    margin-left: 8px;\n    color: ", ";\n    background: ", ";\n  }\n\n  &:hover {\n    pointer-events: ", ";\n    background: ", ";\n    border-color: ", ";\n    text-decoration: none;\n    color: ", ";\n\n    span {\n      color: ", ";\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  overflow: hidden;\n  color: ", ";\n  border: 1px solid ", ";\n  border-radius: 5px;\n  background: ", ";\n  padding-left: 8px;\n  font-size: 12px;\n  vertical-align: middle;\n  line-height: 1;\n  font-weight: bold;\n  margin: 0 8px 16px 0;\n  position: relative;\n  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;\n  text-decoration: none;\n  \n\n  span {\n    display: inline-block;\n    padding: 4px 8px;\n    font-weight: 400;\n    margin-left: 8px;\n    color: ", ";\n    background: ", ";\n  }\n\n  &:hover {\n    pointer-events: ", ";\n    background: ", ";\n    border-color: ", ";\n    text-decoration: none;\n    color: ", ";\n\n    span {\n      color: ", ";\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

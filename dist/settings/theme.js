@@ -42,6 +42,7 @@ var colors = {
     ColorFlamingoBase: '#EE4037',
     ColorTamarilloBase: '#9c1e17',
     ColorJetBase: '#33333f',
+    ColorJetLighter: '#a7b6c2',
     ColorBlackBase: '#262626',
     ColorWhiteBase: '#ffffff'
   },
@@ -69,6 +70,9 @@ var colors = {
       ColorTurquoiseDark: '#4bafb1',
       ColorTurquoiseLight: '#ace6f4',
       ColorTurquoiseLighter: '#def5fa'
+    },
+    yellow: {
+      ColorYellowBase: '#ffff00'
     }
   },
   disable: {

@@ -25,8 +25,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Spacing2 = _settings.spacings.Spacing2;
 var TypographyWeightRegular = _settings.typographyWeights.TypographyWeightRegular;
-var ColorJetBase = _settings.colors.primary.ColorJetBase;
+var ColorJetLighter = _settings.colors.primary.ColorJetLighter;
 
-var StyledParagraph = _styledComponents.default.p(_templateObject(), Spacing2, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, TypographyWeightRegular, ColorJetBase, _settings.appPrefix);
+var StyledParagraph = _styledComponents.default.p(_templateObject(), Spacing2, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, TypographyWeightRegular, ColorJetLighter, _settings.appPrefix);
 
 exports.StyledParagraph = StyledParagraph;

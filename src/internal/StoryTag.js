@@ -18,7 +18,7 @@ const StyledStoryTag = styled.div`
   overflow: hidden;
   color: ${ColorWhiteBase};
   border: 1px solid ${props => (props.isWarning ? ColorRedDark : props.isActive ? ColorGreenDark : ColorJetBase)};
-  border-radius: 50px;
+  border-radius: 5px;
   background: ${props => (props.isWarning ? ColorRedDark : props.isActive ? ColorGreenDark : ColorJetBase)};
   padding-left: 8px;
   font-size: 12px;

@@ -1,0 +1,79 @@
+import { Meta, Story, Preview, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks';
+import styled from 'styled-components';
+import { stripUnit } from 'polished';
+
+export const SpacingContainer = styled.div`
+  width: 100%;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+export const SpacingItem = styled.div`
+    width: 100%;
+    background: ${'#EE4037'};
+    display: block;
+    position: relative;
+    &::before {
+        content: attr(data-hint);
+        position: absolute;
+        left: 0;
+        top: -22px;
+    }
+    code {
+        position: absolute;
+        right: 0;
+        top: -22px;
+    }
+`
+
+export const remToPx = (value) => {
+  return stripUnit(value) * 16+ 'px'
+}
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+## Two scales spacing
+
+| Scale | Purpose |
+| ----- | ------- |
+| Spacing scale | Used for smaller, more refined spacing needs, specifically within the context of a component (i.e. the space between a label and a text input). |
+| Layout scale | Typically used for positioning components on a page (i.e., the space between a text field and a selector). |
+
+## Spacing scale
+
+<SpacingContainer style={{ height: '1000px'}}>
+    <SpacingItem data-hint={`${remToPx('0.125rem')} (${'0.125rem'})`} style={{ height: '0.125rem' }}><code>Spacing1</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('0.25rem')} (${'0.25rem'})`} style={{ height: '0.25rem' }}><code>Spacing2</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('0.5rem')} (${'0.5rem'})`} style={{ height: '0.5rem' }}><code>Spacing3</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('0.75rem')} (${'0.75rem'})`} style={{ height: '0.75rem' }}><code>Spacing4</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('1rem')} (${'1rem'})`} style={{ height: '1rem' }}><code>Spacing5</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('1.25rem')} (${'1.25rem'})`} style={{ height: '1.25rem' }}><code>Spacing6</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('1.5rem')} (${'1.5rem'})`} style={{ height: '1.5rem' }}><code>Spacing7</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('1.75rem')} (${'1.75rem'})`} style={{ height: '1.75rem' }}><code>Spacing8</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('2rem')} (${'2rem'})`} style={{ height: '2rem' }}><code>Spacing9</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('2.25rem')} (${'2.25rem'})`} style={{ height: '2.25rem' }}><code>Spacing10</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('2.5rem')} (${'2.5rem'})`} style={{ height: '2.5rem' }}><code>Spacing11</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('2.75rem')} (${'2.75rem'})`} style={{ height: '2.75rem' }}><code>Spacing12</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('3rem')} (${'3rem'})`} style={{ height: '3rem' }}><code>Spacing13</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('3.25rem')} (${'3.25rem'})`} style={{ height: '3.25rem' }}><code>Spacing14</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('3.5rem')} (${'3.5rem'})`} style={{ height: '3.5rem' }}><code>Spacing15</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('3.75rem')} (${'3.75rem'})`} style={{ height: '3.75rem' }}><code>Spacing16</code></SpacingItem>
+</SpacingContainer>
+
+## Layout scale
+
+<SpacingContainer style={{ height: '750px'}}>
+    <SpacingItem data-hint={`${remToPx('1rem')} (${'1rem'})`} style={{ height: '1rem' }}><code>Layout1</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('1.5rem')} (${'1.5rem'})`} style={{ height: '1.5rem' }}><code>Layout2</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('2rem')} (${'2rem'})`} style={{ height: '2rem' }}><code>Layout3</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('3rem')} (${'3rem'})`} style={{ height: '3rem' }}><code>Layout4</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('4rem')} (${'4rem'})`} style={{ height: '4rem' }}><code>Layout5</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('6rem')} (${'6rem'})`} style={{ height: '6rem' }}><code>Layout6</code></SpacingItem>
+    <SpacingItem data-hint={`${remToPx('10rem')} (${'10rem'})`} style={{ height: '10rem' }}><code>Layout7</code></SpacingItem>
+</SpacingContainer>

@@ -86,7 +86,7 @@ var h1 = _settings.fontSizes.h1,
     h5 = _settings.fontSizes.h5,
     h6 = _settings.fontSizes.h6;
 var TypographyWeightRegular = _settings.typographyWeights.TypographyWeightRegular;
-var ColorJetBase = _settings.colors.primary.ColorJetBase;
+var ColorJetLighter = _settings.colors.primary.ColorJetLighter;
 var margin = (0, _styledTheming.default)('type', {
   h1: "".concat(Spacing4, " 0"),
   h2: "".concat(Spacing4, " 0"),
@@ -97,7 +97,7 @@ var margin = (0, _styledTheming.default)('type', {
 });
 
 var styleHeading = function styleHeading(elementMargin, fontSize) {
-  return "\n  margin: ".concat(elementMargin, ";\n  font-size: ").concat(fontSize, ";\n\n  &.").concat(_settings.appPrefix, "-heading--italic {\n    font-style: italic;\n  }\n\n  &.").concat(_settings.appPrefix, "-heading--assistive {\n    font-style: italic;\n    font-weight: ").concat(TypographyWeightRegular, ";\n    color: ").concat(ColorJetBase, ";\n  }\n");
+  return "\n  margin: ".concat(elementMargin, ";\n  font-size: ").concat(fontSize, ";\n\n  &.").concat(_settings.appPrefix, "-heading--italic {\n    font-style: italic;\n  }\n\n  &.").concat(_settings.appPrefix, "-heading--assistive {\n    font-style: italic;\n    font-weight: ").concat(TypographyWeightRegular, ";\n    color: ").concat(ColorJetLighter, ";\n  }\n");
 };
 
 var StyledHeading1 = _styledComponents.default.h1(_templateObject(), styleHeading(margin, h1));

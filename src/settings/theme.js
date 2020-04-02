@@ -35,6 +35,7 @@ export const colors = {
         ColorFlamingoBase: '#EE4037',
         ColorTamarilloBase: '#9c1e17',
         ColorJetBase: '#33333f',
+        ColorJetLighter: '#a7b6c2',
         ColorBlackBase: '#262626',
         ColorWhiteBase: '#ffffff',
     },
@@ -63,6 +64,9 @@ export const colors = {
             ColorTurquoiseLight: '#ace6f4',
             ColorTurquoiseLighter: '#def5fa',
         },
+        yellow: {
+            ColorYellowBase: '#ffff00',
+        }
     },
     disable: {
         ColorDisableBg: '#f0f0f1',
