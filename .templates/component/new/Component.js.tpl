@@ -16,7 +16,7 @@ const <%= name %> = React.forwardRef(
       id,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-<%= h.changeCase.lower(name) %>`]: true,
@@ -33,12 +33,12 @@ const <%= name %> = React.forwardRef(
           {children}
         </Styled<%= name %>>
       </ThemeProvider>
-    )
-  }
-)
+    );
+  },
+);
 
 <%= name %>.propTypes = {
   id: PropTypes.string,
-}
+};
 
 export default <%= name %>;

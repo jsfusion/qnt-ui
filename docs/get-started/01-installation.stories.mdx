@@ -1,18 +1,37 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { libVersion } from '../../src/settings';
+import { Label } from '../../src';
 
 <Meta title="Get started/1. Installation" />
 
 # Installation
 
-Here are some basic instructions to help you get started
-
-### Install
+<Label>1. Install the QNT UI library package with an NPM client like <code>npm</code> or <code>yarn</code>:</Label>
 
 ```bash
 # Using npm
 $ npm install GIT_URL_WILL_COME_SOON
+```
 
+```bash
 # Using yarn
 $ yarn add GIT_URL_WILL_COME_SOON
+```
+
+<Label>2. Import main css file in the entry file of your application, like <code>Index.js</code>:</Label>
+
+```jsx
+import '@qnt/ui/styles.css';
+```
+
+<Label>3. All set and now you can import and use React components in you application:</Label>
+
+```jsx
+import { Label, Button } from "@qnt/ui";
+ 
+// using JSX:
+const successLabel = <Label isSuccess>Description text...</Label>;
+ 
+// use React.createElement if you're not using JSX.
+const successButton = React.createElement(Button, { variant: 'success' }, "Button Text");
 ```
