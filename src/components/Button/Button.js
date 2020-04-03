@@ -5,15 +5,24 @@ import cx from 'classnames';
 import { StyledButton } from './styles/Button.styles';
 import { appPrefix } from '../../settings';
 
-const sizes = {
-  small: 'small',
-  medium: 'medium',
-  large: 'large'
+const textAlignments = {
+  left: 'left',
+  center: 'center',
+  right: 'right',
+};
+
+const buttonTypes = {
+  button: 'button',
+  submit: 'submit',
+  reset: 'reset',
 };
 
 const variants = {
+  none: 'none',
   primary: 'primary',
-  secondary: 'secondary',
+  success: 'success',
+  warning: 'warning',
+  danger: 'danger',
 };
 
 const Button = React.forwardRef(
@@ -22,33 +31,51 @@ const Button = React.forwardRef(
       children,
       className: customClassName,
       id,
-      size = sizes.medium,
-      variant = 'primary',
-      isDisabled = false,
+      isActive = false,
+      alignText = textAlignments.center,
+      hasFullWidth = false,
+      isLarge = false,
+      isSmall = false,
+      isMinimal = false,
       isLoading = false,
+      hasOutline = false,
       iconLeft,
       iconRight,
+      type = buttonTypes.button,
+      variant = variants.none,
       onClick,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-button`]: true,
+      [`${appPrefix}-button--primary`]: variant === variants.primary && !hasOutline,
+      [`${appPrefix}-button--success`]: variant === variants.success && !hasOutline,
+      [`${appPrefix}-button--warning`]: variant === variants.warning && !hasOutline,
+      [`${appPrefix}-button--danger`]: variant === variants.danger && !hasOutline,
       [`${appPrefix}-button--loading`]: isLoading,
       [customClassName]: !!customClassName,
     });
 
     return (
-      <ThemeProvider theme={{ size: size, variant: variant }}>
+      <ThemeProvider theme={{}}>
         <StyledButton
           id={id}
           ref={ref}
           className={className}
-          disabled={isDisabled || isLoading}
-          aria-disabled={isDisabled || isLoading}
-          isLoading={isLoading}
-          variant={variant}
+          active={isActive}
+          alignText={alignText}
+          fill={hasFullWidth}
+          large={isLarge}
+          small={isSmall}
+          minimal={isMinimal}
+          loading={isLoading}
+          outlined={hasOutline}
+          icon={iconLeft}
+          rightIcon={iconRight}
+          type={type}
+          intent={variant}
           onClick={onClick}
           {...rest}
         >
@@ -61,11 +88,19 @@ const Button = React.forwardRef(
 
 Button.propTypes = {
   id: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(sizes)),
-  variant: PropTypes.oneOf(Object.keys(variants)),
-  isDisabled: PropTypes.bool,
+  isActive: PropTypes.bool,
+  alignText: PropTypes.oneOf(Object.keys(textAlignments)),
+  hasFullWidth: PropTypes.bool,
+  isLarge: PropTypes.bool,
+  isSmall: PropTypes.bool,
+  isMinimal: PropTypes.bool,
   isLoading: PropTypes.bool,
+  hasOutline: PropTypes.bool,
+  iconLeft: PropTypes.string,
+  iconRight: PropTypes.string,
+  type: PropTypes.oneOf(Object.keys(buttonTypes)),
+  variant: PropTypes.oneOf(Object.keys(variants)),
   onClick: PropTypes.func,
-}
+};
 
 export default Button;

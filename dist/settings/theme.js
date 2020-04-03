@@ -3,12 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.typographyKernings = exports.typographyLeadings = exports.typographyWeights = exports.typographySizes = exports.fontSizes = exports.colors = exports.layoutSpacings = exports.spacings = exports.libVersion = exports.appPrefix = void 0;
+exports.theme = exports.libVersion = exports.appPrefix = void 0;
 var appPrefix = 'qnt-ui';
 exports.appPrefix = appPrefix;
 var libVersion = 'v1.0.0';
 exports.libVersion = libVersion;
-var spacings = {
+var theme = {
   Spacing1: '0.125rem',
   Spacing2: '0.25rem',
   Spacing3: '0.5rem',
@@ -24,79 +24,64 @@ var spacings = {
   Spacing13: '3rem',
   Spacing14: '3.25rem',
   Spacing15: '3.5rem',
-  Spacing16: '3.75rem'
-};
-exports.spacings = spacings;
-var layoutSpacings = {
+  Spacing16: '3.75rem',
   Layout1: '1rem',
   Layout2: '1.5rem',
   Layout3: '2rem',
   Layout4: '3rem',
   Layout5: '4rem',
   Layout6: '6rem',
-  Layout7: '10rem'
+  Layout7: '10rem',
+  SizeH1: '2rem',
+  SizeH2: '1.5rem',
+  SizeH3: '1.17rem',
+  SizeH4: '1rem',
+  SizeH5: '0.83rem',
+  SizeH6: '0.67rem',
+  TypographySize1: '0.75rem',
+  TypographySize2: '0.875rem',
+  TypographySize3: '1rem',
+  TypographySize4: '1.25rem',
+  TypographySize5: '1.5rem',
+  TypographySize6: '1.75rem',
+  TypographySize7: '2rem',
+  TypographySize8: '2.5rem',
+  TypographySize9: '3rem',
+  TypographyWeightRegular: 100,
+  TypographyWeightBold: 'bold',
+  ColorPrimary: '#137cbd',
+  ColorSuccess: '#0f9960',
+  ColorWarning: '#d9822b',
+  ColorDanger: '#db3737',
+  ColorWhite: '#ffffff',
+  ColorBlack: '#10161a',
+  ColorAppBackground: '#f5f8fa',
+  ColorDarkAppBackground: '#293742',
+  ColorText: '#182026',
+  ColorDarkText: '#f5f8fa',
+  ColorTextMuted: '#5c7080',
+  ColorDarkTextMuted: '#a7b6c2',
+  ColorTextDisabled: '#5c708099',
+  ColorDarkTextDisabled: '#a7b6c299',
+  ColorHeading: '#182026',
+  ColorDarkHeading: '#f5f8fa',
+  ColorLink: '#106ba3',
+  ColorDarkLink: '#48aff0',
+  ColorTextSelection: '#7dbcff99',
+  ColorIcon: '#5c7080',
+  ColorDarkIcon: '#a7b6c2',
+  ColorIconHover: '#182026',
+  ColorDarkIconHover: '#f5f8fa',
+  ColorIconDisabled: '#5c708099',
+  ColorDarkIconDisabled: '#a7b6c299',
+  ColorIconSelected: '#137cbd',
+  ColorDarkIconSelected: '#137cbd',
+  ColorDividerBlack: '#10161a26',
+  ColorDarkDividerBlack: '#10161a66',
+  ColorDarkDividerWhite: '#ffffff26',
+  ColorCodeText: '#5c7080',
+  ColorDarkCodeText: '#a7b6c2',
+  ColorCodeBackground: '#ffffffb3',
+  ColorDarkCodeBackground: '#10161a4d'
 };
-exports.layoutSpacings = layoutSpacings;
-var colors = {
-  primary: {
-    ColorFlamingoBase: '#EE4037',
-    ColorTamarilloBase: '#9c1e17',
-    ColorJetBase: '#33333f',
-    ColorJetLighter: '#a7b6c2',
-    ColorBlackBase: '#262626',
-    ColorWhiteBase: '#ffffff'
-  },
-  rag: {
-    red: {
-      ColorRedBase: '#dc2f23',
-      ColorRedDark: '#b5271d',
-      ColorRedLight: '#eb8d87',
-      ColorRedLighter: '#f8d9d7'
-    },
-    amber: {
-      ColorAmberBase: '#ff9b3f',
-      ColorAmberDark: '#cc7c32',
-      ColorAmberLight: '#ffcd9f',
-      ColorAmberLighter: '#fff0e2'
-    },
-    green: {
-      ColorGreenBase: '#3ed483',
-      ColorGreenDark: '#31a968',
-      ColorGreenLight: '#9feac1',
-      ColorGreenLighter: '#e2f8ec'
-    },
-    turquoise: {
-      ColorTurquoiseBase: '#5acde9',
-      ColorTurquoiseDark: '#4bafb1',
-      ColorTurquoiseLight: '#ace6f4',
-      ColorTurquoiseLighter: '#def5fa'
-    },
-    yellow: {
-      ColorYellowBase: '#ffff00'
-    }
-  },
-  disable: {
-    ColorDisableBg: '#f0f0f1',
-    ColorDisableFg: '#d6d6d8'
-  }
-};
-exports.colors = colors;
-var fontSizes = {
-  h1: '2rem',
-  h2: '1.5rem',
-  h3: '1.17rem',
-  h4: '1rem',
-  h5: '0.83rem',
-  h6: '0.67rem'
-};
-exports.fontSizes = fontSizes;
-var typographySizes = {};
-exports.typographySizes = typographySizes;
-var typographyWeights = {
-  TypographyWeightRegular: 100
-};
-exports.typographyWeights = typographyWeights;
-var typographyLeadings = {};
-exports.typographyLeadings = typographyLeadings;
-var typographyKernings = {};
-exports.typographyKernings = typographyKernings;
+exports.theme = theme;

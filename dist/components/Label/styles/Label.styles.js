@@ -23,14 +23,13 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Spacing2 = _settings.spacings.Spacing2;
-var TypographyWeightRegular = _settings.typographyWeights.TypographyWeightRegular;
-var ColorJetLighter = _settings.colors.primary.ColorJetLighter,
-    _colors$rag = _settings.colors.rag,
-    ColorRedBase = _colors$rag.red.ColorRedBase,
-    ColorAmberBase = _colors$rag.amber.ColorAmberBase,
-    ColorGreenDark = _colors$rag.green.ColorGreenDark;
+var Spacing2 = _settings.theme.Spacing2,
+    TypographyWeightRegular = _settings.theme.TypographyWeightRegular,
+    ColorTextMuted = _settings.theme.ColorTextMuted,
+    ColorDanger = _settings.theme.ColorDanger,
+    ColorWarning = _settings.theme.ColorWarning,
+    ColorSuccess = _settings.theme.ColorSuccess;
 
-var StyledLabel = _styledComponents.default.label(_templateObject(), Spacing2, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, TypographyWeightRegular, ColorJetLighter, _settings.appPrefix, ColorAmberBase, _settings.appPrefix, ColorRedBase, _settings.appPrefix, ColorGreenDark);
+var StyledLabel = _styledComponents.default.label(_templateObject(), Spacing2, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, TypographyWeightRegular, ColorTextMuted, _settings.appPrefix, ColorWarning, _settings.appPrefix, ColorDanger, _settings.appPrefix, ColorSuccess);
 
 exports.StyledLabel = StyledLabel;

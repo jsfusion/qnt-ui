@@ -26,55 +26,161 @@ import { Button } from '@qnt/ui';
 
 ## Usage
 
-### Primary
+### Variant
 
 <Preview withToolbar>
-  <Story name="1. Primary">
+  <Story name="Variant">
     <>
       <section>
-        <Button variant="primary" size="small">Small Button</Button>
-        <Button variant="primary">Medium Button</Button>
-        <Button variant="primary" size="large">Large Button</Button>
+        <Button>Default Button</Button>
+        &nbsp;
+        <Button variant="primary">Primary Button</Button>
+        &nbsp;
+        <Button variant="success">Success Button</Button>
+        &nbsp;
+        <Button variant="warning">Warning Button</Button>
+        &nbsp;
+        <Button variant="danger">Danger Button</Button>
       </section>
     </>
   </Story>
 </Preview>
 
-### Secondary
+### isActive
 
 <Preview withToolbar>
-  <Story name="2. Secondary">
+  <Story name="isActive">
     <>
       <section>
-        <Button variant="secondary" size="small">Small Button</Button>
-        <Button variant="secondary">Medium Button</Button>
-        <Button variant="secondary" size="large">Large Button</Button>
+        <Button isActive>Default Button</Button>
+        &nbsp;
+        <Button variant="primary" isActive>Primary Button</Button>
+        &nbsp;
+        <Button variant="success" isActive>Success Button</Button>
+        &nbsp;
+        <Button variant="warning" isActive>Warning Button</Button>
+        &nbsp;
+        <Button variant="danger" isActive>Danger Button</Button>
       </section>
     </>
   </Story>
 </Preview>
 
-### Disabled
+### hasOutline
 
 <Preview withToolbar>
-  <Story name="3. Disabled">
+  <Story name="hasOutline">
     <>
       <section>
-        <Button variant="primary" isDisabled>Primary Disabled</Button>
-        <Button variant="secondary" isDisabled>Secondary Disabled</Button>
+        <Button hasOutline>Default Button</Button>
+        &nbsp;
+        <Button variant="primary" hasOutline>Primary Button</Button>
+        &nbsp;
+        <Button variant="success" hasOutline>Success Button</Button>
+        &nbsp;
+        <Button variant="warning" hasOutline>Warning Button</Button>
+        &nbsp;
+        <Button variant="danger" hasOutline>Danger Button</Button>
       </section>
     </>
   </Story>
 </Preview>
 
-### Loading
+### alignText
 
 <Preview withToolbar>
-  <Story name="4. Loading">
+  <Story name="alignText">
     <>
       <section>
-        <Button variant="primary" isLoading>Primary Loading</Button>
-        <Button variant="secondary" isLoading>Secondary Loading</Button>
+        <Button alignText="left" style={{width: '200px'}}>Left Aligned</Button>
+        &nbsp;
+        <Button style={{width: '200px'}}>Center Aligned</Button>
+        &nbsp;
+        <Button alignText="right" style={{width: '200px'}}>Right Aligned</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### hasFullWidth
+
+<Preview withToolbar>
+  <Story name="hasFullWidth">
+    <>
+      <section>
+        <Button hasFullWidth>Full Width Button</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### isLarge
+
+<Preview withToolbar>
+  <Story name="isLarge">
+    <>
+      <section>
+        <Button isLarge>Large Button</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### isSmall
+
+<Preview withToolbar>
+  <Story name="isSmall">
+    <>
+      <section>
+        <Button isSmall>Small Button</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### isMinimal
+
+<Preview withToolbar>
+  <Story name="isMinimal">
+    <>
+      <section>
+        <Button isMinimal>Minimal Button</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### isLoading
+
+<Preview withToolbar>
+  <Story name="isLoading">
+    <>
+      <section>
+        <Button isLoading>Loading Button</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### iconLeft
+
+<Preview withToolbar>
+  <Story name="iconLeft">
+    <>
+      <section>
+        <Button iconLeft="add">Left Icon Button</Button>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### iconRight
+
+<Preview withToolbar>
+  <Story name="iconRight">
+    <>
+      <section>
+        <Button iconRight="add">Right Icon Button</Button>
       </section>
     </>
   </Story>
@@ -83,11 +189,10 @@ import { Button } from '@qnt/ui';
 ### Callback
 
 <Preview withToolbar>
-  <Story name="7. Callback">
+  <Story name="Callback">
     <>
       <section>
-        <Button variant="primary" onClick={() => alert('Primary Button Clicked!')}>Primary Button</Button>
-        <Button variant="secondary" onClick={() => alert('Secondary Button Clicked!')}>Secondary Button</Button>
+        <Button onClick={() => alert('Hello there!')}>Click me</Button>
       </section>
     </>
   </Story>

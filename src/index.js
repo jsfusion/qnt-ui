@@ -5,11 +5,4 @@ import Paragraph from './components/Paragraph';
 import Icon from './components/Icon';
 import Highlight from './components/Highlight';
 
-export {
-    Button,
-    Heading,
-    Label,
-    Paragraph,
-    Icon,
-    Highlight,
-};
+export { Button, Heading, Label, Paragraph, Icon, Highlight };

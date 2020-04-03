@@ -7,16 +7,12 @@ exports.StyledButton = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _styledTheming = _interopRequireDefault(require("styled-theming"));
-
-var _polished = require("polished");
-
-var _settings = require("../../../settings");
+var _core = require("@blueprintjs/core");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  text-align: center;\n  padding: ", ";\n  margin: 5px;\n  cursor: pointer;\n  background: ", ";\n  font-size: ", ";\n  color: ", ";\n  outline: none;\n  font-weight: bold;\n  border: ", ";\n  border-radius: 5px;\n  -webkit-border-radius: 5px;\n  -moz-border-radius: 5px;\n\n  &:hover {\n    box-shadow: 1px 1px 10px -5px #000000;\n  }\n\n  &:disabled {\n    background: ", ";\n    color: ", ";\n    border-color: ", ";\n    cursor: ", ";\n\n    &:hover {\n      box-shadow: none;\n    }\n  }\n\n  .", "-button__label,\n    .", "-button__spinner {\n    position: relative;\n    z-index: 2;\n  }\n\n  .", "-button__label {\n    display: inline-block;\n    height: ", ";\n    opacity: 1;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -27,42 +23,5 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var _colors$primary = _settings.colors.primary,
-    ColorFlamingoBase = _colors$primary.ColorFlamingoBase,
-    ColorWhiteBase = _colors$primary.ColorWhiteBase;
-var _colors$disable = _settings.colors.disable,
-    ColorDisableBg = _colors$disable.ColorDisableBg,
-    ColorDisableFg = _colors$disable.ColorDisableFg;
-var Spacing2 = _settings.spacings.Spacing2,
-    Spacing3 = _settings.spacings.Spacing3,
-    Spacing4 = _settings.spacings.Spacing4,
-    Spacing8 = _settings.spacings.Spacing8;
-var padding = (0, _styledTheming.default)('size', {
-  small: "".concat(Spacing2, " ").concat(Spacing3),
-  medium: "".concat(Spacing3, " ").concat(Spacing4),
-  large: "".concat(Spacing4, " ").concat(Spacing8)
-});
-var bgColor = (0, _styledTheming.default)('variant', {
-  primary: ColorFlamingoBase,
-  secondary: ColorWhiteBase
-});
-var fgColor = (0, _styledTheming.default)('variant', {
-  primary: ColorWhiteBase,
-  secondary: ColorFlamingoBase
-});
-var borderStyle = (0, _styledTheming.default)('variant', {
-  primary: "2px solid ".concat(ColorFlamingoBase),
-  secondary: "2px solid ".concat(ColorFlamingoBase)
-});
-var fontSize = (0, _styledTheming.default)('size', {
-  small: (0, _polished.rem)('12px'),
-  medium: (0, _polished.rem)('14px')
-});
-
-var StyledButton = _styledComponents.default.button(_templateObject(), padding, bgColor, fontSize, fgColor, borderStyle, function (props) {
-  return props.variant === 'primary' ? ColorDisableBg : ColorWhiteBase;
-}, ColorDisableFg, ColorDisableBg, function (props) {
-  return props.isLoading ? 'wait' : 'not-allowed';
-}, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, fontSize);
-
+var StyledButton = (0, _styledComponents.default)(_core.Button)(_templateObject());
 exports.StyledButton = StyledButton;

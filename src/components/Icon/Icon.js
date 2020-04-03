@@ -16,13 +16,13 @@ const Icon = React.forwardRef(
       color = 'currentColor',
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-icon`]: true,
       [customClassName]: !!customClassName,
     });
-  
+
     return (
       <ThemeProvider theme={{}}>
         <StyledIcon
@@ -32,19 +32,17 @@ const Icon = React.forwardRef(
           color={color}
           iconSize={size}
           {...rest}
-        >
-          {children}
-        </StyledIcon>
+        />
       </ThemeProvider>
-    )
-  }
-)
+    );
+  },
+);
 
 Icon.propTypes = {
   id: PropTypes.string,
   size: PropTypes.number,
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
-}
+};
 
 export default Icon;

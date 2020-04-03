@@ -17,7 +17,7 @@ const Paragraph = React.forwardRef(
       isJustify = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-paragraph`]: true,
@@ -27,17 +27,12 @@ const Paragraph = React.forwardRef(
       [`${appPrefix}-paragraph--justify`]: isJustify,
       [customClassName]: !!customClassName,
     });
-  
+
     return (
       <ThemeProvider theme={{}}>
-          <StyledParagraph
-            id={id}
-            ref={ref}
-            className={className}
-            {...rest}
-          >
-            {children}
-          </StyledParagraph>
+        <StyledParagraph id={id} ref={ref} className={className} {...rest}>
+          {children}
+        </StyledParagraph>
       </ThemeProvider>
     );
   },
@@ -49,6 +44,6 @@ Paragraph.propTypes = {
   isItalic: PropTypes.bool,
   isAssistive: PropTypes.bool,
   isJustify: PropTypes.bool,
-}
+};
 
 export default Paragraph;

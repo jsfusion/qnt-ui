@@ -20,7 +20,7 @@ const Highlight = React.forwardRef(
       isItalic = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-highlight`]: true,
@@ -41,9 +41,9 @@ const Highlight = React.forwardRef(
           {children}
         </StyledHighlight>
       </ThemeProvider>
-    )
-  }
-)
+    );
+  },
+);
 
 Highlight.propTypes = {
   id: PropTypes.string,
@@ -51,6 +51,6 @@ Highlight.propTypes = {
   color: PropTypes.string,
   isBold: PropTypes.bool,
   isItalic: PropTypes.bool,
-}
+};
 
 export default Highlight;

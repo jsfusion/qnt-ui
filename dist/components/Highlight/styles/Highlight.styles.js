@@ -12,7 +12,7 @@ var _settings = require("../../../settings");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    background: ", ";\n    color: ", ";\n    padding: 0 2px;\n    \n    &.", "-highlight--bold {\n        font-weight: bold;\n    }\n\n    &.", "-highlight--italic {\n        font-style: italic;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: ", ";\n  color: ", ";\n  padding: 0 2px;\n\n  &.", "-highlight--bold {\n    font-weight: bold;\n  }\n\n  &.", "-highlight--italic {\n    font-style: italic;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

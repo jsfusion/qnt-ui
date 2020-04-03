@@ -32,7 +32,7 @@ const Heading = React.forwardRef(
       isAssistive = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-heading-${type}`]: true,
@@ -43,71 +43,41 @@ const Heading = React.forwardRef(
 
     return (
       <ThemeProvider theme={{ type: type }}>
-        { type === types.h1 &&
-          <StyledHeading1
-            id={id}
-            className={className}
-            ref={ref}
-            {...rest}
-          >
+        {type === types.h1 && (
+          <StyledHeading1 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading1>
-        }
+        )}
 
-        { type === types.h2 &&
-          <StyledHeading2
-            id={id}
-            className={className}
-            ref={ref}
-            {...rest}
-          >
+        {type === types.h2 && (
+          <StyledHeading2 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading2>
-        }
+        )}
 
-        { type === types.h3 &&
-          <StyledHeading3
-            id={id}
-            className={className}
-            ref={ref}
-            {...rest}
-          >
+        {type === types.h3 && (
+          <StyledHeading3 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading3>
-        }
+        )}
 
-        { type === types.h4 &&
-          <StyledHeading4
-            id={id}
-            className={className}
-            ref={ref}
-            {...rest}
-          >
+        {type === types.h4 && (
+          <StyledHeading4 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading4>
-        }
+        )}
 
-        { type === types.h5 &&
-          <StyledHeading5
-            id={id}
-            className={className}
-            ref={ref}
-            {...rest}
-          >
+        {type === types.h5 && (
+          <StyledHeading5 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading5>
-        }
+        )}
 
-        { type === types.h6 &&
-          <StyledHeading6
-            id={id}
-            className={className}
-            ref={ref}
-            {...rest}
-          >
+        {type === types.h6 && (
+          <StyledHeading6 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading6>
-        }
+        )}
       </ThemeProvider>
     );
   },
@@ -118,6 +88,6 @@ Heading.propTypes = {
   type: PropTypes.oneOf(Object.keys(types)),
   isItalic: PropTypes.bool,
   isAssistive: PropTypes.bool,
-}
+};
 
 export default Heading;

@@ -1,14 +1,7 @@
 import styled from 'styled-components';
-import {
-  appPrefix,
-  spacings,
-  typographyWeights,
-  colors,
-} from '../../../settings';
+import { appPrefix, theme } from '../../../settings';
 
-const { Spacing2 } = spacings;
-const { TypographyWeightRegular } = typographyWeights;
-const { primary: { ColorJetLighter } } = colors;
+const { Spacing2, TypographyWeightRegular, ColorTextMuted } = theme;
 
 export const StyledParagraph = styled.p`
   display: block;
@@ -25,7 +18,7 @@ export const StyledParagraph = styled.p`
   &.${appPrefix}-paragraph--assistive {
     font-style: italic;
     font-weight: ${TypographyWeightRegular};
-    color: ${ColorJetLighter};
+    color: ${ColorTextMuted};
   }
 
   &.${appPrefix}-paragraph--justify {

@@ -19,7 +19,7 @@ const Label = React.forwardRef(
       isSuccess = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const className = cx({
       [`${appPrefix}-label`]: true,
@@ -34,14 +34,9 @@ const Label = React.forwardRef(
 
     return (
       <ThemeProvider theme={{}}>
-          <StyledLabel
-            id={id}
-            ref={ref}
-            className={className}
-            {...rest}
-          >
-            {children}
-          </StyledLabel>
+        <StyledLabel id={id} ref={ref} className={className} {...rest}>
+          {children}
+        </StyledLabel>
       </ThemeProvider>
     );
   },
@@ -55,6 +50,6 @@ Label.propTypes = {
   isWarning: PropTypes.bool,
   isError: PropTypes.bool,
   isSuccess: PropTypes.bool,
-}
+};
 
 export default Label;

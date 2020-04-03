@@ -49,7 +49,7 @@ var Icon = _react.default.forwardRef(function (_ref, ref) {
     icon: icon,
     color: color,
     iconSize: size
-  }, rest), children));
+  }, rest)));
 });
 
 Icon.propTypes = {

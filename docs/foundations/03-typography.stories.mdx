@@ -1,0 +1,44 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+import styled from 'styled-components';
+
+export const SampleText = styled.span`
+  font-size: ${props => props.fontSize};
+  font-weight: ${props => props.fontWeight};
+  color: #182026;
+`;
+
+<Meta title="Foundations/3. Typography" />
+
+# Typography
+
+QNT UI library does not include any fonts of its own; it will use the default sans-serif operating system font.
+
+The base font size for QNT UI web applications is 14px (0.875rem). This should be the default type size for most short strings of text which are not headings or titles.
+
+## Font Defaults
+
+| Family | Size | Weight |
+| ------ | ---- | ------ |
+| Sans-Serif | 14px (0.875rem) | 400 |
+
+## Font Sizes
+
+| Size | Sample Text |
+| ---- | ----------- |
+| 12px (0.75rem) | <SampleText fontSize="12px">Lorem ipsum dolor sit amet</SampleText> |
+| 14px (0.875rem) | <SampleText fontSize="14px">Lorem ipsum dolor sit amet</SampleText> |
+| 16px (1rem) | <SampleText fontSize="16px">Lorem ipsum dolor sit amet</SampleText> |
+| 20px (1.25rem) | <SampleText fontSize="20px">Lorem ipsum dolor sit amet</SampleText> |
+| 24px (1.5rem) | <SampleText fontSize="24px">Lorem ipsum dolor sit amet</SampleText> |
+| 28px (1.75rem) | <SampleText fontSize="28px">Lorem ipsum dolor sit amet</SampleText> |
+| 32px (2rem) | <SampleText fontSize="32px">Lorem ipsum dolor sit amet</SampleText> |
+| 40px (2.5rem) | <SampleText fontSize="40px">Lorem ipsum dolor sit amet</SampleText> |
+| 48px (3rem) | <SampleText fontSize="48px">Lorem ipsum dolor sit amet</SampleText> |
+
+
+## Font Weights
+
+| Weight | Sample Text |
+| ------ | ----------- |
+| 400 | <SampleText fontSize="14px" fontWeight="400">Lorem ipsum dolor sit amet</SampleText> |
+| bold | <SampleText fontSize="14px" fontWeight="bold">Lorem ipsum dolor sit amet</SampleText> |

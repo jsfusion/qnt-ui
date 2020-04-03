@@ -1,17 +1,14 @@
 import styled from 'styled-components';
-import {
-  spacings,
-  appPrefix,
-  typographyWeights,
-  colors,
-} from '../../../settings';
+import { appPrefix, theme } from '../../../settings';
 
-const { Spacing2 } = spacings;
-const { TypographyWeightRegular } = typographyWeights;
 const {
-  primary: { ColorJetLighter },
-  rag: { red: { ColorRedBase }, amber: { ColorAmberBase }, green: { ColorGreenDark } },
-} = colors;
+  Spacing2,
+  TypographyWeightRegular,
+  ColorTextMuted,
+  ColorDanger,
+  ColorWarning,
+  ColorSuccess,
+} = theme;
 
 export const StyledLabel = styled.label`
   display: block;
@@ -28,18 +25,18 @@ export const StyledLabel = styled.label`
   &.${appPrefix}-label--assistive {
     font-style: italic;
     font-weight: ${TypographyWeightRegular};
-    color: ${ColorJetLighter};
+    color: ${ColorTextMuted};
   }
 
   &.${appPrefix}-label--warning {
-    color: ${ColorAmberBase};
+    color: ${ColorWarning};
   }
 
   &.${appPrefix}-label--error {
-    color: ${ColorRedBase};
+    color: ${ColorDanger};
   }
 
   &.${appPrefix}-label--success {
-    color: ${ColorGreenDark};
+    color: ${ColorSuccess};
   }
 `;

@@ -1,25 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors} from '../settings';
+import { theme } from '../settings';
 
-const {
-  ColorBlackBase,
-  ColorWhiteBase,
-  ColorJetBase,
-} = colors.primary;
-
-const {
-  red: {ColorRedDark},
-  green: {ColorGreenDark}
-} = colors.rag;
+const { ColorPrimary, ColorSuccess, ColorDanger, ColorWhite, ColorBlack } = theme;
 
 const StyledStoryTag = styled.div`
   display: inline-block;
   overflow: hidden;
-  color: ${ColorWhiteBase};
-  border: 1px solid ${props => (props.isWarning ? ColorRedDark : props.isActive ? ColorGreenDark : ColorJetBase)};
+  color: ${ColorWhite};
+  border: 1px solid
+    ${(props) =>
+      props.isWarning
+        ? ColorDanger
+        : props.isActive
+        ? ColorSuccess
+        : ColorPrimary};
   border-radius: 5px;
-  background: ${props => (props.isWarning ? ColorRedDark : props.isActive ? ColorGreenDark : ColorJetBase)};
+  background: ${(props) =>
+    props.isWarning
+      ? ColorDanger
+      : props.isActive
+      ? ColorSuccess
+      : ColorPrimary};
   padding-left: 8px;
   font-size: 12px;
   vertical-align: middle;
@@ -29,27 +31,36 @@ const StyledStoryTag = styled.div`
   position: relative;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   text-decoration: none;
-  
 
   span {
     display: inline-block;
     padding: 4px 8px;
     font-weight: 400;
     margin-left: 8px;
-    color: ${ColorBlackBase};
-    background: ${ColorWhiteBase};
+    color: ${ColorBlack};
+    background: ${ColorWhite};
   }
 
   &:hover {
-    pointer-events: ${props => (props.isWarning || props.isActive ? 'none' : 'normal')};
-    background: ${props => (props.isWarning ? ColorRedDark : props.isActive ? ColorGreenDark : ColorJetBase)};
-    border-color: ${props =>
-      props.isWarning ? ColorRedDark : props.isActive ? ColorGreenDark : ColorJetBase};
+    pointer-events: ${(props) =>
+      props.isWarning || props.isActive ? 'none' : 'normal'};
+    background: ${(props) =>
+      props.isWarning
+        ? ColorDanger
+        : props.isActive
+        ? ColorSuccess
+        : ColorPrimary};
+    border-color: ${(props) =>
+      props.isWarning
+        ? ColorDanger
+        : props.isActive
+        ? ColorSuccess
+        : ColorPrimary};
     text-decoration: none;
-    color: ${ColorWhiteBase};
+    color: ${ColorWhite};
 
     span {
-      color: ${ColorBlackBase};
+      color: ${ColorBlack};
     }
   }
 `;

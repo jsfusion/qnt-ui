@@ -46,7 +46,7 @@ Promise.all([rimrafAsync(`${rootDir}/dist`)])
       },
     );
   })
-  .catch(error => {
+  .catch((error) => {
     console.error('One of the commands failed:', error.stack); // eslint-disable-line no-console
     process.exit(1);
   });

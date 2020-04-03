@@ -27,14 +27,15 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var sizes = {
-  small: 'small',
-  medium: 'medium',
-  large: 'large'
+var textAlignments = {
+  left: 'left',
+  center: 'center',
+  right: 'right'
 };
-var variants = {
-  primary: 'primary',
-  secondary: 'secondary'
+var buttonTypes = {
+  button: 'button',
+  submit: 'submit',
+  reset: 'reset'
 };
 
 var Button = _react.default.forwardRef(function (_ref, ref) {
@@ -43,33 +44,45 @@ var Button = _react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       customClassName = _ref.className,
       id = _ref.id,
-      _ref$size = _ref.size,
-      size = _ref$size === void 0 ? sizes.medium : _ref$size,
-      _ref$variant = _ref.variant,
-      variant = _ref$variant === void 0 ? 'primary' : _ref$variant,
-      _ref$isDisabled = _ref.isDisabled,
-      isDisabled = _ref$isDisabled === void 0 ? false : _ref$isDisabled,
+      _ref$isActive = _ref.isActive,
+      isActive = _ref$isActive === void 0 ? false : _ref$isActive,
+      _ref$alignText = _ref.alignText,
+      alignText = _ref$alignText === void 0 ? textAlignments.center : _ref$alignText,
+      _ref$isFullWidth = _ref.isFullWidth,
+      isFullWidth = _ref$isFullWidth === void 0 ? false : _ref$isFullWidth,
+      _ref$isLarge = _ref.isLarge,
+      isLarge = _ref$isLarge === void 0 ? false : _ref$isLarge,
+      _ref$isSmall = _ref.isSmall,
+      isSmall = _ref$isSmall === void 0 ? false : _ref$isSmall,
+      _ref$isMinimal = _ref.isMinimal,
+      isMinimal = _ref$isMinimal === void 0 ? false : _ref$isMinimal,
       _ref$isLoading = _ref.isLoading,
       isLoading = _ref$isLoading === void 0 ? false : _ref$isLoading,
-      iconLeft = _ref.iconLeft,
-      iconRight = _ref.iconRight,
+      _ref$hasOutline = _ref.hasOutline,
+      hasOutline = _ref$hasOutline === void 0 ? false : _ref$hasOutline,
+      icon = _ref.icon,
+      _ref$type = _ref.type,
+      type = _ref$type === void 0 ? buttonTypes.button : _ref$type,
       onClick = _ref.onClick,
-      rest = _objectWithoutProperties(_ref, ["children", "className", "id", "size", "variant", "isDisabled", "isLoading", "iconLeft", "iconRight", "onClick"]);
+      rest = _objectWithoutProperties(_ref, ["children", "className", "id", "isActive", "alignText", "isFullWidth", "isLarge", "isSmall", "isMinimal", "isLoading", "hasOutline", "icon", "type", "onClick"]);
 
-  var className = (0, _classnames.default)((_cx = {}, _defineProperty(_cx, "".concat(_settings.appPrefix, "-button"), true), _defineProperty(_cx, "".concat(_settings.appPrefix, "-button--loading"), isLoading), _defineProperty(_cx, customClassName, !!customClassName), _cx));
+  var className = (0, _classnames.default)((_cx = {}, _defineProperty(_cx, "".concat(_settings.appPrefix, "-button"), true), _defineProperty(_cx, customClassName, !!customClassName), _cx));
   return _react.default.createElement(_styledComponents.ThemeProvider, {
-    theme: {
-      size: size,
-      variant: variant
-    }
+    theme: {}
   }, _react.default.createElement(_Button.StyledButton, _extends({
     id: id,
     ref: ref,
     className: className,
-    disabled: isDisabled || isLoading,
-    "aria-disabled": isDisabled || isLoading,
-    isLoading: isLoading,
-    variant: variant,
+    active: isActive,
+    alignText: alignText,
+    fill: isFullWidth,
+    large: isLarge,
+    small: isSmall,
+    minimal: isMinimal,
+    loading: isLoading,
+    outlined: hasOutline,
+    rightIcon: icon,
+    type: type,
     onClick: onClick
   }, rest), _react.default.createElement("span", {
     className: "".concat(_settings.appPrefix, "-button__label")
@@ -78,10 +91,16 @@ var Button = _react.default.forwardRef(function (_ref, ref) {
 
 Button.propTypes = {
   id: _propTypes.PropTypes.string,
-  size: _propTypes.PropTypes.oneOf(Object.keys(sizes)),
-  variant: _propTypes.PropTypes.oneOf(Object.keys(variants)),
-  isDisabled: _propTypes.PropTypes.bool,
+  isActive: _propTypes.PropTypes.bool,
+  alignText: _propTypes.PropTypes.oneOf(Object.keys(textAlignments)),
+  isFullWidth: _propTypes.PropTypes.bool,
+  isLarge: _propTypes.PropTypes.bool,
+  isSmall: _propTypes.PropTypes.bool,
+  isMinimal: _propTypes.PropTypes.bool,
   isLoading: _propTypes.PropTypes.bool,
+  hasOutline: _propTypes.PropTypes.bool,
+  icon: _propTypes.PropTypes.string,
+  type: _propTypes.PropTypes.oneOf(Object.keys(buttonTypes)),
   onClick: _propTypes.PropTypes.func
 };
 var _default = Button;

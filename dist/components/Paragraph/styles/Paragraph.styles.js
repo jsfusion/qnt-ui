@@ -23,10 +23,10 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Spacing2 = _settings.spacings.Spacing2;
-var TypographyWeightRegular = _settings.typographyWeights.TypographyWeightRegular;
-var ColorJetLighter = _settings.colors.primary.ColorJetLighter;
+var Spacing2 = _settings.theme.Spacing2,
+    TypographyWeightRegular = _settings.theme.TypographyWeightRegular,
+    ColorTextMuted = _settings.theme.ColorTextMuted;
 
-var StyledParagraph = _styledComponents.default.p(_templateObject(), Spacing2, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, TypographyWeightRegular, ColorJetLighter, _settings.appPrefix);
+var StyledParagraph = _styledComponents.default.p(_templateObject(), Spacing2, _settings.appPrefix, _settings.appPrefix, _settings.appPrefix, TypographyWeightRegular, ColorTextMuted, _settings.appPrefix);
 
 exports.StyledParagraph = StyledParagraph;

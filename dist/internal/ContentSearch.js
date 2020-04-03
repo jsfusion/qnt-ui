@@ -22,7 +22,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  background: transparent;\n  max-width: 340px;\n  width: 100%;\n  height: '36px';\n  \n  input[type=\"search\"] {\n    border-radius: 5px;\n  }\n\n  input[type=\"search\"]:focus {\n    box-shadow: 1px 1px 5px -2px ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  background: transparent;\n  max-width: 340px;\n  width: 100%;\n  height: '36px';\n\n  input[type='search'] {\n    border-radius: 5px;\n  }\n\n  input[type='search']:focus {\n    box-shadow: 1px 1px 5px -2px ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33,8 +33,8 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ColorJetBase = _settings.colors.primary.ColorJetBase;
-var StyledContentSearch = (0, _styledComponents.default)(_core.InputGroup)(_templateObject(), ColorJetBase);
+var ColorBlack = _settings.theme.ColorBlack;
+var StyledContentSearch = (0, _styledComponents.default)(_core.InputGroup)(_templateObject(), ColorBlack);
 
 var ContentSearch = function ContentSearch(_ref) {
   var value = _ref.value,
