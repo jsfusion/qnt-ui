@@ -50,10 +50,14 @@ const Button = React.forwardRef(
   ) => {
     const className = cx({
       [`${appPrefix}-button`]: true,
-      [`${appPrefix}-button--primary`]: variant === variants.primary && !hasOutline,
-      [`${appPrefix}-button--success`]: variant === variants.success && !hasOutline,
-      [`${appPrefix}-button--warning`]: variant === variants.warning && !hasOutline,
-      [`${appPrefix}-button--danger`]: variant === variants.danger && !hasOutline,
+      [`${appPrefix}-button--primary`]:
+        variant === variants.primary && !hasOutline,
+      [`${appPrefix}-button--success`]:
+        variant === variants.success && !hasOutline,
+      [`${appPrefix}-button--warning`]:
+        variant === variants.warning && !hasOutline,
+      [`${appPrefix}-button--danger`]:
+        variant === variants.danger && !hasOutline,
       [`${appPrefix}-button--loading`]: isLoading,
       [customClassName]: !!customClassName,
     });

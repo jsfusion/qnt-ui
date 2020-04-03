@@ -3,7 +3,7 @@ import { Icon as BPIcon } from '@blueprintjs/core';
 
 export const StyledIcon = styled(BPIcon)`
   && {
-    ${props => css`
+    ${(props) => css`
       width: ${props.iconSize}px;
       height: ${props.iconSize}px;
     `}

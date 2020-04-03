@@ -2,7 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../settings';
 
-const { ColorPrimary, ColorSuccess, ColorDanger, ColorWhite, ColorBlack } = theme;
+const {
+  ColorPrimary,
+  ColorSuccess,
+  ColorDanger,
+  ColorWhite,
+  ColorBlack,
+} = theme;
 
 const StyledStoryTag = styled.div`
   display: inline-block;

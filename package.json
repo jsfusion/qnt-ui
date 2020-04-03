@@ -24,7 +24,8 @@
     "build": "npm run build:css && node scripts/build.js",
     "rebuild": "npm run clean && npm install && npm run build",
     "watch:css": "postcss src/assets/styles.css -o styles.css -w",
-    "watch": ""
+    "watch": "",
+    "format": "prettier --write \"src/**/*.js\""
   },
   "dependencies": {
     "@blueprintjs/core": "3.24.0",
