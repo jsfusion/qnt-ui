@@ -1,0 +1,58 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Spinner from '..';
+
+<Meta title="Components/Spinner" />
+
+<Story name="Import" />
+
+# Spinner
+
+Spinners indicate progress in a circular fashion, they're great for ongoing operations.
+
+## Import
+
+```jsx
+import { Spinner } from '@qnt/ui';
+```
+
+<Story name="Props" />
+
+## Props
+
+<Props of={Spinner} />
+
+## Usage
+
+### Default
+
+<Preview withToolbar>
+  <Story name="Default">
+    <>
+      <Spinner />
+    </>
+  </Story>
+</Preview>
+
+### size
+
+<Preview withToolbar>
+  <Story name="size">
+    <>
+      <Spinner size={20}/>
+    </>
+  </Story>
+</Preview>
+
+### variant
+
+<Preview withToolbar>
+  <Story name="variant">
+    <>
+      <Spinner size={20}/>
+      <Spinner size={30} variant="primary"/>
+      <Spinner size={40} variant="success"/>
+      <Spinner size={50} variant="warning"/>
+      <Spinner size={60} variant="danger"/>
+    </>
+  </Story>
+</Preview>

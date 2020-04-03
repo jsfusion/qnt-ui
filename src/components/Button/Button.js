@@ -32,6 +32,7 @@ const Button = React.forwardRef(
       className: customClassName,
       id,
       isActive = false,
+      isDisabled = false,
       alignText = textAlignments.center,
       hasFullWidth = false,
       isLarge = false,
@@ -51,13 +52,13 @@ const Button = React.forwardRef(
     const className = cx({
       [`${appPrefix}-button`]: true,
       [`${appPrefix}-button--primary`]:
-        variant === variants.primary && !hasOutline,
+        variant === variants.primary && !hasOutline && !isDisabled,
       [`${appPrefix}-button--success`]:
-        variant === variants.success && !hasOutline,
+        variant === variants.success && !hasOutline && !isDisabled,
       [`${appPrefix}-button--warning`]:
-        variant === variants.warning && !hasOutline,
+        variant === variants.warning && !hasOutline && !isDisabled,
       [`${appPrefix}-button--danger`]:
-        variant === variants.danger && !hasOutline,
+        variant === variants.danger && !hasOutline && !isDisabled,
       [`${appPrefix}-button--loading`]: isLoading,
       [customClassName]: !!customClassName,
     });
@@ -69,6 +70,7 @@ const Button = React.forwardRef(
           ref={ref}
           className={className}
           active={isActive}
+          disabled={isDisabled}
           alignText={alignText}
           fill={hasFullWidth}
           large={isLarge}
@@ -93,6 +95,7 @@ const Button = React.forwardRef(
 Button.propTypes = {
   id: PropTypes.string,
   isActive: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   alignText: PropTypes.oneOf(Object.keys(textAlignments)),
   hasFullWidth: PropTypes.bool,
   isLarge: PropTypes.bool,

@@ -39,6 +39,24 @@ Object.defineProperty(exports, "Highlight", {
     return _Highlight.default;
   }
 });
+Object.defineProperty(exports, "LinkPreview", {
+  enumerable: true,
+  get: function get() {
+    return _LinkPreview.default;
+  }
+});
+Object.defineProperty(exports, "Spinner", {
+  enumerable: true,
+  get: function get() {
+    return _Spinner.default;
+  }
+});
+Object.defineProperty(exports, "Image", {
+  enumerable: true,
+  get: function get() {
+    return _Image.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./components/Button"));
 
@@ -51,5 +69,11 @@ var _Paragraph = _interopRequireDefault(require("./components/Paragraph"));
 var _Icon = _interopRequireDefault(require("./components/Icon"));
 
 var _Highlight = _interopRequireDefault(require("./components/Highlight"));
+
+var _LinkPreview = _interopRequireDefault(require("./components/LinkPreview"));
+
+var _Spinner = _interopRequireDefault(require("./components/Spinner"));
+
+var _Image = _interopRequireDefault(require("./components/Image"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

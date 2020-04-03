@@ -85,6 +85,8 @@ export const theme = {
   ColorDarkCodeText: '#a7b6c2',
   ColorCodeBackground: '#ffffffb3',
   ColorDarkCodeBackground: '#10161a4d',
+  ColorDisabledBackground: 'rgba(206, 217, 224, 0.5)',
+  ColorDisabled: 'rgba(92, 112, 128, 0.6)',
 
   // Gray Scale Colors
   ColorBlack: '#10161a',
