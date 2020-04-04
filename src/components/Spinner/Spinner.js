@@ -33,6 +33,7 @@ const Spinner = React.forwardRef(
     return (
       <ThemeProvider theme={{}}>
         <StyledSpinner
+          id={id}
           ref={ref}
           className={className}
           intent={variant}

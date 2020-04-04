@@ -26,6 +26,7 @@ const <%= name %> = React.forwardRef(
     return (
       <ThemeProvider theme={{}}>
         <Styled<%= name %>
+          id={id}
           ref={ref}
           className={className}
           {...rest}

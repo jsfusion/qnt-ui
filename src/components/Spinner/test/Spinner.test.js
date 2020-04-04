@@ -8,6 +8,8 @@ configure({ adapter: new Adapter() });
 let wrapper;
 const props = {
   id: 'test_spinner_id',
+  variant: 'success',
+  size: 30,
 };
 
 describe('***--- Spinner Component ---***', () => {

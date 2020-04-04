@@ -26,6 +26,7 @@ const Icon = React.forwardRef(
     return (
       <ThemeProvider theme={{}}>
         <StyledIcon
+          id={id}
           ref={ref}
           className={className}
           icon={icon}

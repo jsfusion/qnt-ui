@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 let wrapper;
 const props = {
   id: 'test_linkpreview_id',
-  url: 'https://fb.com',
+  url: 'https://blueprintjs.com',
   previewNotFoundText: 'Custom text',
   isFullWidth: true,
 };

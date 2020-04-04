@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming/create';
 import { addons } from '@storybook/addons';
-import { libVersion, theme } from '../../src/settings';
+import { libVersion, theme } from '../../src';
 
 const {
   ColorPrimary,

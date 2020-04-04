@@ -42,6 +42,13 @@ export const StyledLinkPreview = styled.a`
     padding: 10px;
   }
 
+  .${appPrefix}-linkpreview__link {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .${appPrefix}-linkpreview__image {
     height: 100px;
     width: 100px;

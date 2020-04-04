@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import copy from 'copy-to-clipboard';
 import Icon from '../../src/components/Icon';
 import { IconNames } from "@blueprintjs/icons";
-import ContentSearch from '../../src/internal/ContentSearch';
-import { Label } from '../../src';
+import { Label, SearchInput } from '../../src';
 
 export const IconGallery = () => {
   const icons = Object.keys(IconNames).map(name => ({ iconName: IconNames[name]}));
@@ -22,7 +21,7 @@ export const IconGallery = () => {
   }, [searchTerm]);
   return (
     <>
-      <ContentSearch placeholder="Search icons" isFullWidth value={searchTerm} onChange={handleChange} autocomplete="off" />
+      <SearchInput placeholder="Search icons" isFullWidth value={searchTerm} onChange={handleChange} autocomplete="off" />
       <IconContainer>
          {searchResults.map(item => (
           <IconItem key={item.iconName} data-name={item.iconName} onClick={() => copy(item.iconName)}><Icon size={16} icon={item.iconName}/></IconItem>
@@ -98,7 +97,7 @@ export const IconPalette = () => {
 
 # Icons
 
-Blueprint provides over 300 vector UI icons and easy access to change their color or apply effects like text shadows via standard SVG or CSS properties.
+We are using Blueprint icons pack and it provides over 300 vector UI icons and easy access to change their color or apply effects like text shadows via standard SVG or CSS properties.
 
 > <Label isWarning>Click on icon to copy the name</Label>
 

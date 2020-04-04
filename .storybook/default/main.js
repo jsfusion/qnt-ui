@@ -6,11 +6,8 @@ module.exports = {
   ],
   addons: [
     '@storybook/preset-create-react-app',
-    '@storybook/addon-knobs',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
-    '@storybook/addon-actions',
     '@storybook/addon-docs',
-    '@storybook/addon-viewport',
   ],
 };

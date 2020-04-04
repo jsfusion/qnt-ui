@@ -32,6 +32,7 @@ const Highlight = React.forwardRef(
     return (
       <ThemeProvider theme={{}}>
         <StyledHighlight
+          id={id}
           ref={ref}
           className={className}
           highlightColor={highlightColor}

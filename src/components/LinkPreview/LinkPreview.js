@@ -7,6 +7,7 @@ import cx from 'classnames';
 import { StyledLinkPreview } from './styles/LinkPreview.styles';
 import { appPrefix } from '../../settings';
 import Spinner from '../Spinner';
+import { Icon } from '@blueprintjs/core';
 
 const LinkPreview = React.forwardRef(
   (
@@ -95,7 +96,11 @@ const LinkPreview = React.forwardRef(
             previewNotFoundText ? (
               previewNotFoundText
             ) : (
-              url ? url : 'URL is required'
+              url ? <>
+                <span className={`${appPrefix}-linkpreview__link`}>
+                  <Icon icon="link" />&nbsp;&nbsp;{url}
+                </span>
+              </> : 'URL is required'
             )
           ) : (
             <>
