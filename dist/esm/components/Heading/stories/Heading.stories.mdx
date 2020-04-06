@@ -1,0 +1,75 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Heading from '..';
+
+<Meta title="Components/Heading" />
+
+<Story name="Import" />
+
+# Heading
+
+Heading component implies all the font changes, paragraph breaks before and after, and any white space necessary to render the heading.
+
+## Import
+
+```jsx
+import { Heading } from '@qnt/ui';
+```
+
+<Story name="Props" />
+
+## Props
+
+<Props of={Heading} />
+
+## Usage
+
+### Default
+
+<Preview withToolbar>
+  <Story name="Default">
+    <>
+      <section>
+        <Heading type='h1'>Heading H1</Heading>
+        <Heading type='h2'>Heading H2</Heading>
+        <Heading type='h3'>Heading H3</Heading>
+        <Heading type='h4'>Heading H4</Heading>
+        <Heading type='h5'>Heading H5</Heading>
+        <Heading type='h6'>Heading H6</Heading>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### isItalic
+
+<Preview withToolbar>
+  <Story name="isItalic">
+    <>
+      <section>
+        <Heading type='h1' isItalic>Heading H1</Heading>
+        <Heading type='h2' isItalic>Heading H2</Heading>
+        <Heading type='h3' isItalic>Heading H3</Heading>
+        <Heading type='h4' isItalic>Heading H4</Heading>
+        <Heading type='h5' isItalic>Heading H5</Heading>
+        <Heading type='h6' isItalic>Heading H6</Heading>
+      </section>
+    </>
+  </Story>
+</Preview>
+
+### isAssistive
+
+<Preview withToolbar>
+  <Story name="isAssistive">
+    <>
+      <section>
+        <Heading type='h1' isAssistive>Heading H1</Heading>
+        <Heading type='h2' isAssistive>Heading H2</Heading>
+        <Heading type='h3' isAssistive>Heading H3</Heading>
+        <Heading type='h4' isAssistive>Heading H4</Heading>
+        <Heading type='h5' isAssistive>Heading H5</Heading>
+        <Heading type='h6' isAssistive>Heading H6</Heading>
+      </section>
+    </>
+  </Story>
+</Preview>

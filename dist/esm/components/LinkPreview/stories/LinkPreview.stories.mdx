@@ -1,0 +1,61 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import LinkPreview from '..';
+import Highlight from '../../Highlight';
+
+<Meta title="Components/LinkPreview" />
+
+<Story name="Import" />
+
+# LinkPreview
+
+LinkPreview shows about an embedded link, e.g. a headline, image, summary from the link destination.
+
+<Highlight><b>Note:</b> This component will not work for some or many websites due to the <b>CORS</b> policies.</Highlight>
+
+## Import
+
+```jsx
+import { LinkPreview } from '@qnt/ui';
+```
+
+<Story name="Props" />
+
+## Props
+
+<Props of={LinkPreview} />
+
+## Usage
+
+### Default
+
+<Preview withToolbar>
+  <Story name="Default">
+    <>
+      <LinkPreview url="https://blueprintjs.com" />
+      <br />
+      <LinkPreview url="http://www.test-domain.com" />
+    </>
+  </Story>
+</Preview>
+
+### previewNotFoundText
+
+<Preview withToolbar>
+  <Story name="previewNotFoundText">
+    <>
+      <LinkPreview url="http://www.test-domain.com" previewNotFoundText="Custom message" />
+    </>
+  </Story>
+</Preview>
+
+### isFullWidth
+
+<Preview withToolbar>
+  <Story name="isFullWidth">
+    <>
+      <LinkPreview url="https://developer.mozilla.org/en-US/docs/Web/HTML" isFullWidth />
+      <br />
+      <LinkPreview url="http://www.test-domain.com" isFullWidth />
+    </>
+  </Story>
+</Preview>

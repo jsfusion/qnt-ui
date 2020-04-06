@@ -1,11 +1,12 @@
 {
   "name": "@qnt/ui",
   "version": "1.0.0",
-  "description": "QNT UI Component Library",
+  "description": "QNT React UI Library",
   "sideEffects": false,
   "private": true,
   "author": "Shubham Thakare",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
     "dist",
     "styles.css"
@@ -19,7 +20,7 @@
     "clean": "rm -rf node_modules package-lock.json yarn.lock",
     "new:component": "hygen component new",
     "build:css": "postcss src/assets/styles.css -o styles.css --env production",
-    "storybook": "start-storybook -c .storybook/default -p 3100 -s static --ci",
+    "storybook": "npm run watch:css & start-storybook -c .storybook/default -p 3100 -s static --ci",
     "build:storybook": "build-storybook --docs -c .storybook/default -s static -o public",
     "serve:storybook": "serve public",
     "build": "npm run build:css && node scripts/build.js",
