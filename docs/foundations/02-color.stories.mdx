@@ -1,0 +1,134 @@
+import { Meta, Story, Preview, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Color can speak, as powerful as language.
+
+> [Color contrast checker](https://webaim.org/resources/contrastchecker/) for [WCAG 2.0](https://www.w3.org/TR/WCAG20/) accessibility standards.
+
+## Gray Scale
+
+Black, white and everything in between. The gray scale should be used for the main UI frame: containers, headers, sections, boxes, etc.
+
+<ColorPalette>
+  <ColorItem
+    title="Black"
+    subtitle="ColorBlack"
+    colors={['#10161A']}
+  />
+  <ColorItem
+    title="White"
+    subtitle="ColorWhite"
+    colors={['#FFFFFF']}
+  />
+  <ColorItem
+    title="Dark Gray"
+    subtitle="ColorDarkGray"
+    colors={['#394B59', '#30404D', '#293742', '#202B33', '#182026']}
+  />
+  <ColorItem
+    title="Gray"
+    subtitle="ColorGray"
+    colors={['#BFCCD6', '#A7B6C2', '#8A9BA8', '#738694', '#5C7080']}
+  />
+  <ColorItem
+    title="Light Gray"
+    subtitle="ColorLightGray"
+    colors={['#F5F8FA', '#EBF1F5', '#E1E8ED', '#D8E1E8', '#CED9E0']}
+  />
+</ColorPalette>
+
+---
+
+## Core Colors
+
+Core colors are reserved for user interface design. Use these to help call attention to specific UI elements, such as buttons, callouts, icons, etc. Each core color is mapped to what we call a visual intent. We use intents to convey the status of UI elements:
+
+* *Blue* (intent: primary) elevates elements from the typical gray scale UI frame.
+* *Green* (intent: success) indicates successful operations.
+* *Orange* (intent: warning) indicates warnings and intermediate states.
+* *Red* (intent: danger) indicates errors and potentially destructive operations.
+
+<ColorPalette>
+  <ColorItem
+    title="Blue"
+    subtitle="ColorBlue"
+    colors={['#48AFF0', '#2B95D6', '#137CBD', '#106BA3', '#0E5A8A']}
+  />
+  <ColorItem
+    title="Green"
+    subtitle="ColorGreen"
+    colors={['#3DCC91', '#15B371', '#0F9960', '#0D8050', '#0A6640']}
+  />
+  <ColorItem
+    title="Orange"
+    subtitle="ColorOrange"
+    colors={['#FFB366', '#F29D49', '#D9822B', '#BF7326', '#A66321']}
+  />
+  <ColorItem
+    title="Red"
+    subtitle="ColorRed"
+    colors={['#FF7373', '#F55656', '#DB3737', '#C23030', '#A82A2A']}
+  />
+</ColorPalette>
+
+---
+
+## Extended Colors
+
+Extended colors should typically be reserved for data visualizations: any time you need to represent data of some sort, you can use these. These colors are less strict on [WCAG 2.0](https://www.w3.org/TR/WCAG20/) accessibility standards and should therefore not be used for typical user interface design.
+
+<ColorPalette>
+  <ColorItem
+    title="Vermilion"
+    subtitle="ColorVermilion"
+    colors={['#FF6E4A', '#EB532D', '#D13913', '#B83211', '#9E2B0E']}
+  />
+  <ColorItem
+    title="Rose"
+    subtitle="ColorRose"
+    colors={['#FF66A1', '#F5498B', '#DB2C6F', '#C22762', '#A82255']}
+  />
+  <ColorItem
+    title="Voilet"
+    subtitle="ColorVoilet"
+    colors={['#C274C2', '#A854A8', '#8F398F', '#752F75', '#5C255C']}
+  />
+  <ColorItem
+    title="Indigo"
+    subtitle="ColorIndigo"
+    colors={['#AD99FF', '#9179F2', '#7157D9', '#634DBF', '#5642A6']}
+  />
+  <ColorItem
+    title="Cobalt"
+    subtitle="ColorCobalt"
+    colors={['#669EFF', '#4580E6', '#2965CC', '#2458B3', '#1F4B99']}
+  />
+  <ColorItem
+    title="Turquoise"
+    subtitle="ColorTurquoise"
+    colors={['#2EE6D6', '#14CCBD', '#00B3A4', '#00998C', '#008075']}
+  />
+  <ColorItem
+    title="Forest"
+    subtitle="ColorForest"
+    colors={['#62D96B', '#43BF4D', '#29A634', '#238C2C', '#1D7324']}
+  />
+  <ColorItem
+    title="Lime"
+    subtitle="ColorLime"
+    colors={['#D1F26D', '#B6D94C', '#9BBF30', '#87A629', '#728C23']}
+  />
+  <ColorItem
+    title="Gold"
+    subtitle="ColorGold"
+    colors={['#FFC940', '#F2B824', '#D99E0B', '#BF8C0A', '#A67908']}
+  />
+  <ColorItem
+    title="Sepia"
+    subtitle="ColorSepia"
+    colors={['#C99765', '#B07B46', '#96622D', '#7D5125', '#63411E']}
+  />
+</ColorPalette>

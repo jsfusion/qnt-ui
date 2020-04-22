@@ -1,21 +1,27 @@
-import styled, { css } from 'styled-components';
-import { spacings } from '../../../settings';
+import styled from 'styled-components';
+import { appPrefix, theme } from '../../../settings';
 
-const { spacing2 } = spacings;
+const { Spacing2, TypographyWeightRegular, ColorTextMuted } = theme;
 
 export const StyledParagraph = styled.p`
   display: block;
-  margin: ${spacing2} 0;
+  margin: ${Spacing2} 0;
 
-  ${props => props.isBold && css`
+  &.${appPrefix}-paragraph--bold {
     font-weight: bold;
-  `}
+  }
 
-  ${props => props.isItalic && css`
+  &.${appPrefix}-paragraph--italic {
     font-style: italic;
-  `}
+  }
 
-  ${props => props.isJustify && css`
+  &.${appPrefix}-paragraph--assistive {
+    font-style: italic;
+    font-weight: ${TypographyWeightRegular};
+    color: ${ColorTextMuted};
+  }
+
+  &.${appPrefix}-paragraph--justify {
     text-align: justify;
-  `}
+  }
 `;

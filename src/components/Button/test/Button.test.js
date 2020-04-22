@@ -11,7 +11,7 @@ const props = {
   size: 'small',
   variant: 'secondary',
   isDisabled: false,
-  onClick: () => console.log('Button clicked')
+  onClick: () => console.log('Button clicked'),
 };
 
 describe('***--- Button Component ---***', () => {

@@ -9,6 +9,8 @@ let wrapper;
 const props = {
   id: 'test_heading_id',
   type: 'h1',
+  isItalic: true,
+  isAssistive: true,
 };
 
 describe('***--- Heading Component ---***', () => {

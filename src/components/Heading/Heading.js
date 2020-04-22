@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import cx from 'classnames';
 import {
   StyledHeading1,
   StyledHeading2,
@@ -9,9 +10,7 @@ import {
   StyledHeading5,
   StyledHeading6,
 } from './styles/Heading.styles';
-import { themeProps } from '../../settings';
-
-const { classPrefix } = themeProps;
+import { appPrefix } from '../../settings';
 
 const types = {
   h1: 'h1',
@@ -26,67 +25,59 @@ const Heading = React.forwardRef(
   (
     {
       children,
+      className: customClassName,
       id,
       type = types.h3,
+      isItalic = false,
+      isAssistive = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
+    const className = cx({
+      [`${appPrefix}-heading-${type}`]: true,
+      [`${appPrefix}-heading--italic`]: isItalic,
+      [`${appPrefix}-heading--assistive`]: isAssistive,
+      [customClassName]: !!customClassName,
+    });
+
     return (
       <ThemeProvider theme={{ type: type }}>
-        { type === types.h1 &&
-          <StyledHeading1
-            id={id}
-            className={`${classPrefix}-heading-h1`}
-          >
+        {type === types.h1 && (
+          <StyledHeading1 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading1>
-        }
+        )}
 
-        { type === types.h2 &&
-          <StyledHeading2
-            id={id}
-            className={`${classPrefix}-heading-h2`}
-          >
+        {type === types.h2 && (
+          <StyledHeading2 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading2>
-        }
+        )}
 
-        { type === types.h3 &&
-          <StyledHeading3
-            id={id}
-            className={`${classPrefix}-heading-h3`}
-          >
+        {type === types.h3 && (
+          <StyledHeading3 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading3>
-        }
+        )}
 
-        { type === types.h4 &&
-          <StyledHeading4
-            id={id}
-            className={`${classPrefix}-heading-h4`}
-          >
+        {type === types.h4 && (
+          <StyledHeading4 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading4>
-        }
+        )}
 
-        { type === types.h5 &&
-          <StyledHeading5
-            id={id}
-            className={`${classPrefix}-heading-h5`}
-          >
+        {type === types.h5 && (
+          <StyledHeading5 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading5>
-        }
+        )}
 
-        { type === types.h6 &&
-          <StyledHeading6
-            id={id}
-            className={`${classPrefix}-heading-h6`}
-          >
+        {type === types.h6 && (
+          <StyledHeading6 id={id} className={className} ref={ref} {...rest}>
             {children}
           </StyledHeading6>
-        }
+        )}
       </ThemeProvider>
     );
   },
@@ -95,6 +86,8 @@ const Heading = React.forwardRef(
 Heading.propTypes = {
   id: PropTypes.string,
   type: PropTypes.oneOf(Object.keys(types)),
-}
+  isItalic: PropTypes.bool,
+  isAssistive: PropTypes.bool,
+};
 
 export default Heading;

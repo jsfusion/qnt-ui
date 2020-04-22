@@ -1,0 +1,182 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Directory Structure" />
+
+# Directory Structure
+
+It's always good to document each and everything, because documents always help us to understand things clearly.
+
+Here you can find the complete directory structure of the QNT UI library.
+
+```
+├── .storybook
+|   ├── default
+|   ├── container.js
+|   ├── favicon.ico
+|   ├── main.js
+|   ├── manager-head.html
+|   ├── manager.js
+|   ├── preview-head.html
+|   └── preview.js
+├── .templates
+|   └── component
+|       └── new
+|           ├── stories
+|           |   └── Component.stories.mdx.tpl
+|           ├── styles
+|           |   └── Component.styles.tpl
+|           ├── test
+|           |   └── Component.test.js.tpl
+|           ├── Component.js.tpl
+|           ├── index.js
+|           ├── index.js.tpl
+|           └── README.md.tpl
+├── .vscode
+|   ├── extensions.json
+|   └── launch.json
+├── docs
+|   ├── foundations
+|   |   ├── 01-color-stories.mdx
+|   |   ├── 02-spacing-stories.mdx
+|   |   ├── 03-typography-stories.mdx
+|   |   ├── 04-iconography-stories.mdx
+|   |   └── 05-directory-structure.mdx
+|   └── get-started
+|       ├── 01-installation-stories.mdx
+|       ├── 02-introduction-stories.mdx
+|       └── 03-references.stories.mdx
+├── scripts
+|   └── build.js
+├── src
+|   ├── assets
+|   |   └── styles.css
+|   ├── components
+|   |   ├── Button
+|   |   |   ├── stories
+|   |   |   |   └── Button.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Button.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Button.test.js
+|   |   |   ├── Button.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Heading
+|   |   |   ├── stories
+|   |   |   |   └── Heading.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Heading.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Heading.test.js
+|   |   |   ├── Heading.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Highlight
+|   |   |   ├── stories
+|   |   |   |   └── Highlight.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Highlight.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Highlight.test.js
+|   |   |   ├── Highlight.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Icon
+|   |   |   ├── stories
+|   |   |   |   └── Icon.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Icon.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Icon.test.js
+|   |   |   ├── Icon.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Image
+|   |   |   ├── stories
+|   |   |   |   └── Image.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Image.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Image.test.js
+|   |   |   ├── Image.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Label
+|   |   |   ├── stories
+|   |   |   |   └── Label.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Label.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Label.test.js
+|   |   |   ├── Label.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── LinkPreview
+|   |   |   ├── stories
+|   |   |   |   └── LinkPreview.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── LinkPreview.styles.js
+|   |   |   ├── test
+|   |   |   |   └── LinkPreview.test.js
+|   |   |   ├── LinkPreview.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Paragraph
+|   |   |   ├── stories
+|   |   |   |   └── Paragraph.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Paragraph.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Paragraph.test.js
+|   |   |   ├── Paragraph.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── SearchInput
+|   |   |   ├── stories
+|   |   |   |   └── SearchInput.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── SearchInput.styles.js
+|   |   |   ├── test
+|   |   |   |   └── SearchInput.test.js
+|   |   |   ├── SearchInput.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   ├── Callout
+|   |   |   ├── stories
+|   |   |   |   └── Callout.stories.mdx
+|   |   |   ├── styles
+|   |   |   |   └── Callout.styles.js
+|   |   |   ├── test
+|   |   |   |   └── Callout.test.js
+|   |   |   ├── Callout.js
+|   |   |   ├── index.js
+|   |   |   └── README.md
+|   |   └── Spinner
+|   |       ├── stories
+|   |       |   └── Spinner.stories.mdx
+|   |       ├── styles
+|   |       |   └── Spinner.styles.js
+|   |       ├── test
+|   |       |   └── Spinner.test.js
+|   |       ├── Spinner.js
+|   |       ├── index.js
+|   |       └── README.md
+|   ├── internal
+|   |   └── Tag.js
+|   ├── settings
+|   |   ├── index.js
+|   |   └── theme.js
+|   └── index.js
+├── .editorconfig
+├── .eslintrc.json
+├── .gitignore
+├── .hygen.js
+├── .prettierignore
+├── .prettierrc
+├── babel.config.js
+├── jest.config.js
+├── LICENSE
+├── package.json
+├── postcss.config.js
+└── README.md
+```

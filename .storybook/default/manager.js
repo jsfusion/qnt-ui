@@ -1,16 +1,22 @@
 import { create } from '@storybook/theming/create';
 import { addons } from '@storybook/addons';
-import { libVersion } from '../../src/settings';
+import { libVersion, theme } from '../../src';
+
+const {
+  ColorPrimary,
+  ColorBlack,
+  ColorAppBackground,
+} = theme;
 
 addons.setConfig({
   theme: create({
     base: 'light',
-    colorPrimary: '#ee4037',
-    colorSecondary: '#5743d6',
-    appBg: '#ffffff',
-    appContentBg: '#ffffff',
-    brandTitle: `<span style="color: #ee4037; font-weight: 600;">QNT UI ${libVersion}</span>`,
-    brandUrl: 'https://github.com/shubham-thakare/qnt-ui',
+    colorPrimary: ColorPrimary,
+    colorSecondary: ColorBlack,
+    appBg: ColorAppBackground,
+    appContentBg: ColorAppBackground,
+    brandTitle: `<span style="color: ${ColorPrimary}; font-size: 16px; line-height: 1.5;">QNT React UI</span> <i>${libVersion}</i>`,
+    brandUrl: '/',
     gridCellSize: 8,
   }),
 });

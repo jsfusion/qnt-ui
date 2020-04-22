@@ -1,34 +1,38 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { themeProps } from '../../settings';
+import cx from 'classnames';
+import { appPrefix } from '../../settings';
 import { StyledParagraph } from './styles/Paragraph.styles';
-
-const { classPrefix } = themeProps;
 
 const Paragraph = React.forwardRef(
   (
     {
       children,
+      className: customClassName,
       id,
       isBold = false,
       isItalic = false,
+      isAssistive = false,
       isJustify = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
+    const className = cx({
+      [`${appPrefix}-paragraph`]: true,
+      [`${appPrefix}-paragraph--bold`]: isBold,
+      [`${appPrefix}-paragraph--italic`]: isItalic,
+      [`${appPrefix}-paragraph--assistive`]: isAssistive,
+      [`${appPrefix}-paragraph--justify`]: isJustify,
+      [customClassName]: !!customClassName,
+    });
+
     return (
       <ThemeProvider theme={{}}>
-          <StyledParagraph
-            id={id}
-            className={`${classPrefix}-paragraph`}
-            isBold={isBold}
-            isItalic={isItalic}
-            isJustify={isJustify}
-          >
-            {children}
-          </StyledParagraph>
+        <StyledParagraph id={id} ref={ref} className={className} {...rest}>
+          {children}
+        </StyledParagraph>
       </ThemeProvider>
     );
   },
@@ -38,7 +42,8 @@ Paragraph.propTypes = {
   id: PropTypes.string,
   isBold: PropTypes.bool,
   isItalic: PropTypes.bool,
+  isAssistive: PropTypes.bool,
   isJustify: PropTypes.bool,
-}
+};
 
 export default Paragraph;

@@ -1,0 +1,57 @@
+import { Meta, Story, Preview, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks';
+import styled from 'styled-components';
+import { stripUnit } from 'polished';
+
+export const SpacingExample = styled.div`
+    background: #293742;
+    display: block;
+    position: relative;
+    height: ${props => props.height};
+    width: ${props => props.width};
+`
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+Spacing makes the UI breathe and the user feels more comfortable exploring it.
+
+## Spacing Scale
+
+Used for smaller, more refined spacing needs, specifically within the context of a component (i.e. the space between a label and a text input).
+
+| Px | Rem | Example |
+| -- | --- | ------- |
+| 2 | 0.125 | <SpacingExample height="0.125rem" width="0.125rem" /> |
+| 4 | 0.25 | <SpacingExample height="0.25rem" width="0.25rem" /> |
+| 8 | 0.5 | <SpacingExample height="0.5rem" width="0.5rem" /> |
+| 12 | 0.75 | <SpacingExample height="0.75rem" width="0.75rem" /> |
+| 16 | 1 | <SpacingExample height="1rem" width="1rem" /> |
+| 20 | 1.25 | <SpacingExample height="1.25rem" width="1.25rem" /> |
+| 24 | 1.5 | <SpacingExample height="1.5rem" width="1.5rem" /> |
+| 28 | 1.75 | <SpacingExample height="1.75rem" width="1.75rem" /> |
+| 32 | 2 | <SpacingExample height="2rem" width="2rem" /> |
+| 36 | 2.25 | <SpacingExample height="2.25rem" width="2.25rem" /> |
+| 40 | 2.5 | <SpacingExample height="2.5rem" width="2.5rem" /> |
+| 44 | 2.75 | <SpacingExample height="2.75rem" width="2.75rem" /> |
+| 48 | 3 | <SpacingExample height="3rem" width="3rem" /> |
+| 52 | 3.25 | <SpacingExample height="3.25rem" width="3.25rem" /> |
+| 56 | 3.5 | <SpacingExample height="3.5rem" width="3.5rem" /> |
+| 60 | 3.75 | <SpacingExample height="3.75rem" width="3.75rem" /> |
+
+---
+
+## Layout scale
+
+Typically used for positioning components on a page (i.e., the space between a text field and a selector).
+
+
+| Px | Rem | Example |
+| -- | --- | ------- |
+| 16 | 1 | <SpacingExample height="1rem" width="1rem" /> |
+| 24 | 1.5 | <SpacingExample height="1.5rem" width="1.5rem" /> |
+| 32 | 2 | <SpacingExample height="2rem" width="2rem" /> |
+| 48 | 3 | <SpacingExample height="3rem" width="3rem" /> |
+| 64 | 4 | <SpacingExample height="4rem" width="4rem" /> |
+| 96 | 6 | <SpacingExample height="6rem" width="6rem" /> |
+| 160 | 10 | <SpacingExample height="10rem" width="10rem" /> |

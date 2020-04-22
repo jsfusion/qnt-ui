@@ -1,0 +1,88 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Callout from '..';
+
+<Meta title="Components/Callout" />
+
+<Story name="Import" />
+
+# Callout
+
+Callouts visually highlight important content for the user. They can contain a title, an icon and content. Each intent has a default icon associated with it.
+
+## Import
+
+```jsx
+import { Callout } from '@qnt/ui';
+```
+
+<Story name="Props" />
+
+## Props
+
+<Props of={Callout} />
+
+## Usage
+
+### Default
+
+<Preview withToolbar>
+  <Story name="Default">
+    <>
+      <Callout>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Callout>
+    </>
+  </Story>
+</Preview>
+
+### title
+
+<Preview withToolbar>
+  <Story name="title">
+    <>
+      <Callout title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Callout>
+    </>
+  </Story>
+</Preview>
+
+### icon
+
+<Preview withToolbar>
+  <Story name="icon">
+    <>
+      <Callout icon="info-sign" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Callout>
+    </>
+  </Story>
+</Preview>
+
+### variant
+
+<Preview withToolbar>
+  <Story name="variant">
+    <>
+      <Callout title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </Callout>
+      <br />
+      <Callout variant="primary" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </Callout>
+      <br />
+      <Callout variant="success" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </Callout>
+      <br />
+      <Callout variant="warning" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </Callout>
+      <br />
+      <Callout variant="danger" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </Callout>
+    </>
+  </Story>
+</Preview>
