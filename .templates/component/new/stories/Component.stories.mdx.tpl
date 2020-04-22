@@ -24,8 +24,10 @@ import { <%= name %> } from '@qnt/ui';
 
 ## Usage
 
+### Default
+
 <Preview withToolbar>
-  <Story name="Usage">
+  <Story name="Default">
     <>
       <<%= name %> />
     </>

@@ -1,48 +1,42 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { themeProps } from '../../settings';
+import cx from 'classnames';
+import { appPrefix } from '../../settings';
 import { StyledLabel } from './styles/Label.styles';
-
-const { classPrefix } = themeProps;
-
-const fontWeights = {
-  100: '100',
-  200: '200',
-  300: '300',
-  400: '400',
-  500: '500',
-  600: '600',
-  700: '700',
-  800: '800',
-  900: '900',
-  bold: 'bold',
-  bolder: 'bolder',
-};
 
 const Label = React.forwardRef(
   (
     {
       children,
+      className: customClassName,
       id,
-      fontWeight = '100',
+      isBold = false,
       isItalic = false,
+      isAssistive = false,
+      isWarning = false,
+      isError = false,
+      isSuccess = false,
       ...rest
     },
-    ref
+    ref,
   ) => {
+    const className = cx({
+      [`${appPrefix}-label`]: true,
+      [`${appPrefix}-label--bold`]: isBold,
+      [`${appPrefix}-label--italic`]: isItalic,
+      [`${appPrefix}-label--assistive`]: isAssistive,
+      [`${appPrefix}-label--warning`]: isWarning,
+      [`${appPrefix}-label--error`]: isError,
+      [`${appPrefix}-label--success`]: isSuccess,
+      [customClassName]: !!customClassName,
+    });
+
     return (
       <ThemeProvider theme={{}}>
-          <StyledLabel
-            id={id}
-            ref={ref}
-            className={`${classPrefix}-label`}
-            fontWeight={fontWeight}
-            isItalic={isItalic}
-            {...rest}
-          >
-            {children}
-          </StyledLabel>
+        <StyledLabel id={id} ref={ref} className={className} {...rest}>
+          {children}
+        </StyledLabel>
       </ThemeProvider>
     );
   },
@@ -50,8 +44,12 @@ const Label = React.forwardRef(
 
 Label.propTypes = {
   id: PropTypes.string,
-  fontWeight: PropTypes.oneOf(Object.keys(fontWeights)),
+  isBold: PropTypes.bool,
   isItalic: PropTypes.bool,
-}
+  isAssistive: PropTypes.bool,
+  isWarning: PropTypes.bool,
+  isError: PropTypes.bool,
+  isSuccess: PropTypes.bool,
+};
 
 export default Label;

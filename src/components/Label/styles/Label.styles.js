@@ -1,17 +1,42 @@
-import styled, { css } from 'styled-components';
-import { spacings } from '../../../settings';
+import styled from 'styled-components';
+import { appPrefix, theme } from '../../../settings';
 
-const { spacing2 } = spacings;
+const {
+  Spacing2,
+  TypographyWeightRegular,
+  ColorTextMuted,
+  ColorDanger,
+  ColorWarning,
+  ColorSuccess,
+} = theme;
 
 export const StyledLabel = styled.label`
   display: block;
-  margin: ${spacing2} 0;
+  margin: ${Spacing2} 0;
 
-  ${props => css`
-    font-weight: ${props.fontWeight};
-  `}
+  &.${appPrefix}-label--bold {
+    font-weight: bold;
+  }
 
-  ${props => props.isItalic && css`
+  &.${appPrefix}-label--italic {
     font-style: italic;
-  `}
+  }
+
+  &.${appPrefix}-label--assistive {
+    font-style: italic;
+    font-weight: ${TypographyWeightRegular};
+    color: ${ColorTextMuted};
+  }
+
+  &.${appPrefix}-label--warning {
+    color: ${ColorWarning};
+  }
+
+  &.${appPrefix}-label--error {
+    color: ${ColorDanger};
+  }
+
+  &.${appPrefix}-label--success {
+    color: ${ColorSuccess};
+  }
 `;

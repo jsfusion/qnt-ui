@@ -1,0 +1,36 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Icon from '..';
+
+<Meta title="Components/Icon" />
+
+<Story name="Import" />
+
+# Icon
+
+An icon is a glyph used to represent something else.
+
+## Import
+
+```jsx
+import { Icon } from '@qnt/ui';
+```
+
+<Story name="Props" />
+
+## Props
+
+<Props of={Icon} />
+
+## Usage
+
+<Preview withToolbar>
+  <Story name="Usage">
+    <>
+      <Icon icon="endorsed" color="#EE4037"/>
+      <Icon icon="endorsed" size={32} color="#9c1e17"/>
+      <Icon icon="endorsed" size={48} color="#31a968"/>
+      <Icon icon="endorsed" size={32} color="#33333f"/>
+      <Icon icon="endorsed"/>
+    </>
+  </Story>
+</Preview>

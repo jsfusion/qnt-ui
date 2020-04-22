@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.d97c4563.chunk.css","sources":["webpack:///styles.css"],"sourcesContent":["@import '~@blueprintjs/core/lib/css/blueprint.css';\n@import '~@blueprintjs/icons/lib/css/blueprint-icons.css';\n\nbody {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n}"],"mappings":"AAGA;AACA;AACA;","sourceRoot":""}

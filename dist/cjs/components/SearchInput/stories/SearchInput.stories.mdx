@@ -1,0 +1,68 @@
+import { useEffect } from 'react';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import SearchInput from '..';
+import Label from '../../Label';
+import Highlight from '../../Highlight';
+
+export const onChangeHandler = (evt) => {
+  document.getElementById('search-label').innerHTML = evt.target.value;
+}
+
+
+<Meta title="Components/SearchInput" />
+
+<Story name="Import" />
+
+# SearchInput
+
+Search are text fields designed for the user to enter search queries into.
+
+## Import
+
+```jsx
+import { SearchInput } from '@qnt/ui';
+```
+
+<Story name="Props" />
+
+## Props
+
+<Props of={SearchInput} />
+
+## Usage
+
+### Default
+
+<Preview withToolbar>
+  <Story name="Default">
+    <>
+      <SearchInput />
+    </>
+  </Story>
+</Preview>
+
+### placeholder
+
+<Preview withToolbar>
+  <Story name="placeholder">
+    <>
+      <SearchInput placeholder="Custom placeholder text..."/>
+    </>
+  </Story>
+</Preview>
+
+### onChange
+
+<Preview withToolbar>
+  <Story name="onChange">
+    <>
+      <SearchInput
+        onChange={evt => onChangeHandler(evt)}
+      />
+      <br />
+      <br />
+      <Label isWarning isBold>Search text will appear here...</Label>
+      <Highlight id="search-label"></Highlight>
+    </>
+  </Story>
+</Preview>

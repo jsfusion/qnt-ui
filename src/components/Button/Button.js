@@ -1,47 +1,91 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import cx from 'classnames';
 import { StyledButton } from './styles/Button.styles';
-import { themeProps } from '../../settings';
+import { appPrefix } from '../../settings';
 
-const { classPrefix } = themeProps;
+const textAlignments = {
+  left: 'left',
+  center: 'center',
+  right: 'right',
+};
 
-const sizes = {
-  small: 'small',
-  medium: 'medium',
-  large: 'large'
+const buttonTypes = {
+  button: 'button',
+  submit: 'submit',
+  reset: 'reset',
 };
 
 const variants = {
+  none: 'none',
   primary: 'primary',
-  secondary: 'secondary',
+  success: 'success',
+  warning: 'warning',
+  danger: 'danger',
 };
 
 const Button = React.forwardRef(
   (
     {
       children,
+      className: customClassName,
       id,
-      size = sizes.medium,
-      variant = 'primary',
+      isActive = false,
       isDisabled = false,
+      alignText = textAlignments.center,
+      hasFullWidth = false,
+      isLarge = false,
+      isSmall = false,
+      isMinimal = false,
+      isLoading = false,
+      hasOutline = false,
+      iconLeft,
+      iconRight,
+      type = buttonTypes.button,
+      variant = variants.none,
       onClick,
       ...rest
     },
-    ref
+    ref,
   ) => {
+    const className = cx({
+      [`${appPrefix}-button`]: true,
+      [`${appPrefix}-button--primary`]:
+        variant === variants.primary && !hasOutline && !isDisabled,
+      [`${appPrefix}-button--success`]:
+        variant === variants.success && !hasOutline && !isDisabled,
+      [`${appPrefix}-button--warning`]:
+        variant === variants.warning && !hasOutline && !isDisabled,
+      [`${appPrefix}-button--danger`]:
+        variant === variants.danger && !hasOutline && !isDisabled,
+      [`${appPrefix}-button--loading`]: isLoading,
+      [customClassName]: !!customClassName,
+    });
+
     return (
-      <ThemeProvider theme={{ size: size, variant: variant }}>
+      <ThemeProvider theme={{}}>
         <StyledButton
           id={id}
           ref={ref}
-          className={`${classPrefix}-button`}
+          className={className}
+          active={isActive}
           disabled={isDisabled}
-          variant={variant}
+          alignText={alignText}
+          fill={hasFullWidth}
+          large={isLarge}
+          small={isSmall}
+          minimal={isMinimal}
+          loading={isLoading}
+          outlined={hasOutline}
+          icon={iconLeft}
+          rightIcon={iconRight}
+          type={type}
+          intent={variant}
           onClick={onClick}
           {...rest}
         >
-          <span className={`${classPrefix}-button__label`}>{children}</span>
+          <span className={`${appPrefix}-button__label`}>{children}</span>
         </StyledButton>
       </ThemeProvider>
     );
@@ -50,10 +94,20 @@ const Button = React.forwardRef(
 
 Button.propTypes = {
   id: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(sizes)),
-  variant: PropTypes.oneOf(Object.keys(variants)),
+  isActive: PropTypes.bool,
   isDisabled: PropTypes.bool,
+  alignText: PropTypes.oneOf(Object.keys(textAlignments)),
+  hasFullWidth: PropTypes.bool,
+  isLarge: PropTypes.bool,
+  isSmall: PropTypes.bool,
+  isMinimal: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  hasOutline: PropTypes.bool,
+  iconLeft: PropTypes.string,
+  iconRight: PropTypes.string,
+  type: PropTypes.oneOf(Object.keys(buttonTypes)),
+  variant: PropTypes.oneOf(Object.keys(variants)),
   onClick: PropTypes.func,
-}
+};
 
 export default Button;

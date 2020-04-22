@@ -1,13 +1,15 @@
 {
   "name": "@qnt/ui",
   "version": "1.0.0",
-  "description": "QNT UI Component Library",
+  "description": "QNT React UI Library",
   "sideEffects": false,
   "private": true,
   "author": "Shubham Thakare",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
-    "dist"
+    "dist",
+    "styles.css"
   ],
   "license": "MIT",
   "scripts": {
@@ -18,20 +20,26 @@
     "clean": "rm -rf node_modules package-lock.json yarn.lock",
     "new:component": "hygen component new",
     "build:css": "postcss src/assets/styles.css -o styles.css --env production",
-    "storybook": "start-storybook -c .storybook/default -p 3100 -s static --ci",
+    "storybook": "npm run watch:css & start-storybook -c .storybook/default -p 3100 -s static --ci",
     "build:storybook": "build-storybook --docs -c .storybook/default -s static -o public",
     "serve:storybook": "serve public",
     "build": "npm run build:css && node scripts/build.js",
     "rebuild": "npm run clean && npm install && npm run build",
     "watch:css": "postcss src/assets/styles.css -o styles.css -w",
-    "watch": ""
+    "watch": "",
+    "format": "prettier --write \"src/**/*.js\""
   },
   "dependencies": {
+    "@blueprintjs/core": "3.24.0",
+    "@blueprintjs/icons": "3.14.0",
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "9.5.0",
     "@testing-library/user-event": "7.2.1",
+    "classnames": "2.2.6",
+    "copy-to-clipboard": "3.3.1",
     "polished": "3.5.1",
     "react-scripts": "3.4.1",
+    "reflexbox": "4.0.6",
     "styled-components": "5.0.1",
     "styled-theming": "2.2.0"
   },

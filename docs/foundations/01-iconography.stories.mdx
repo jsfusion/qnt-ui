@@ -1,0 +1,80 @@
+import { useState, useEffect } from 'react';
+import { Meta, Story, Preview, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks';
+import styled from 'styled-components';
+import copy from 'copy-to-clipboard';
+import Icon from '../../src/components/Icon';
+import { IconNames } from "@blueprintjs/icons";
+import { Label, SearchInput } from '../../src';
+
+export const Icons = () => {
+  const icons = Object.keys(IconNames).map(name => ({ iconName: IconNames[name]}));
+  const [search, setSearch] = React.useState("");
+  const [filteredResults, setFilteredResults] = React.useState([]);
+  const handleChange = event => {
+    setSearch(event.target.value);
+  };
+  useEffect(() => {
+    const results = icons.filter(icon =>
+      icon.iconName.toLowerCase().includes(search)
+    );
+    setFilteredResults(results);
+  }, [search]);
+  return (
+    <>
+      <SearchInput placeholder="Search icons" isFullWidth value={search} onChange={handleChange} autocomplete="off" />
+      <Container>
+         {filteredResults.map(item => (
+          <IconItem key={item.iconName} onClick={() => copy(item.iconName)}>
+            <div style={{alignSelf: 'center'}} className="icon">
+              <Icon size={16} icon={item.iconName}/>
+            </div>
+            <div style={{alignSelf: 'start', fontSize: '13px'}}>
+              {item.iconName}
+            </div>
+          </IconItem>
+        ))}
+      </Container>
+    </>
+  );
+}
+
+export const Container = styled.div`
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+`;
+
+export const IconItem = styled.div`
+    display: grid;
+    grid-template-rows: 70% 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    margin: 2px;
+    padding: 15px 2px;
+    border: 1px solid #ececec;
+    background: #fafcfd;
+    font-size: 12px;
+    color: #394B59;
+    &:hover .icon {
+      transform: scale(1.2);
+    }
+    .icon {
+      transition: all 100ms ease-in-out;
+    }
+`;
+
+<Meta title="Foundations/Icons" />
+
+# Icons
+
+We are using Blueprint icons pack and it provides over 300 vector UI icons and easy access to change their color or apply effects like text shadows via standard SVG or CSS properties.
+
+> <Label isWarning>Click on icon to copy the name</Label>
+
+<Icons />

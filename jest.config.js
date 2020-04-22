@@ -13,7 +13,7 @@ module.exports = {
     // ignore files under __tests__ that start with an underscore
     '/__tests__\\/.*?\\/_.*?',
   ],
-  transformIgnorePatterns: ['\\/node_modules\\/(?!@atlaskit|@dentsu)'],
+  transformIgnorePatterns: ['\\/node_modules'],
 
   testMatch: ['<rootDir>/src/components/**/*.test.js'],
   testEnvironment: 'jsdom',
